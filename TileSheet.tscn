@@ -12,12 +12,12 @@ points = Vector2Array( 32, -33.0847, 32, 32, -33.0847, 32, -33.0847, 32, -33, -3
 [sub_resource type="ConvexPolygonShape2D" id=2]
 
 custom_solver_bias = 0.0
-points = Vector2Array( -1.69566, 10, -1.69566, 0, 9.6087, 0, 9.6087, 10 )
+points = Vector2Array( -1.69566, 60, -1.69566, 0, 77.4348, 0, 77.4348, 60 )
 
 [sub_resource type="ConvexPolygonShape2D" id=3]
 
 custom_solver_bias = 0.0
-points = Vector2Array( -10, 10, -10, -10, 0, -10, 0, 10 )
+points = Vector2Array( -10, 120, -10, -10, 70, -10, 70, 120 )
 
 [node name="TileSheet" type="Node2D"]
 
@@ -49,7 +49,7 @@ trigger = false
 
 [node name="PetiteCaisse" type="Sprite" parent="."]
 
-transform/pos = Vector2( 90, 10 )
+transform/pos = Vector2( 90, 0 )
 texture = ExtResource( 2 )
 centered = false
 
@@ -71,13 +71,13 @@ bounce = 0.0
 transform/pos = Vector2( 1.5, 0 )
 transform/scale = Vector2( 0.884615, 1 )
 build_mode = 0
-polygon = Vector2Array( -1.69566, 10, -1.69566, 0, 9.6087, 0, 9.6087, 10 )
+polygon = Vector2Array( -1.69566, 60, -1.69566, 0, 77.4348, 0, 77.4348, 60 )
 shape_range = Vector2( 0, 0 )
 trigger = false
 
 [node name="GrandeCaisse" type="Sprite" parent="."]
 
-transform/pos = Vector2( 110, 10 )
+transform/pos = Vector2( 180, 0 )
 texture = ExtResource( 3 )
 centered = false
 
@@ -98,7 +98,7 @@ bounce = 0.0
 
 transform/pos = Vector2( 10, 10 )
 build_mode = 0
-polygon = Vector2Array( -10, 10, -10, -10, 0, -10, 0, 10 )
+polygon = Vector2Array( -10, 120, -10, -10, 70, -10, 70, 120 )
 shape_range = Vector2( 0, 0 )
 trigger = false
 
