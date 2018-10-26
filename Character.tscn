@@ -30,7 +30,7 @@ tracks/0/keys = {
 transform/pos = Vector2( 278.967, 480.465 )
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1.92818, -2.0506, -12.4335 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1.92818, -2.0506, -12.4334 )
 shapes/0/trigger = false
 collision/layers = 1
 collision/mask = 1
@@ -45,7 +45,7 @@ hframes = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
-transform/pos = Vector2( -2.0506, -12.4335 )
+transform/pos = Vector2( -2.0506, -12.4334 )
 transform/scale = Vector2( 1, 1.92818 )
 shape = SubResource( 1 )
 trigger = false
