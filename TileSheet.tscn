@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=1]
+[gd_scene load_steps=5 format=1]
 
 [ext_resource path="res://tile-test.png" type="Texture" id=1]
+[ext_resource path="res://placeholder32.png" type="Texture" id=2]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 
@@ -10,7 +11,7 @@ points = Vector2Array( 32, -33.0847, 32, 32, -33.0847, 32, -33.0847, 32, -33, -3
 [sub_resource type="ConvexPolygonShape2D" id=2]
 
 custom_solver_bias = 0.0
-points = Vector2Array( 32, -33.0847, 32, 32, -33.0847, 32, -33.0847, 32, -33, -33 )
+points = Vector2Array( 15, -15, 15, 15, -15, 15, -15, 15, -15, -15 )
 
 [node name="TileSheet" type="Node2D"]
 
@@ -24,7 +25,7 @@ texture = ExtResource( 1 )
 
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, -0.542374, -0.542374 )
 shapes/0/trigger = false
 collision/layers = 1
 collision/mask = 1
@@ -35,6 +36,7 @@ bounce = 0.0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Base/StaticBody2D"]
 
+transform/pos = Vector2( -0.542374, -0.542374 )
 build_mode = 0
 polygon = Vector2Array( -33, -33, -33.0847, 32, -33.0847, 32, 32, 32, 32, -33.0847 )
 shape_range = Vector2( 0, 0 )
@@ -42,9 +44,8 @@ trigger = false
 
 [node name="Little" type="Sprite" parent="."]
 
-transform/pos = Vector2( 106, 25 )
-transform/scale = Vector2( 0.46, 0.46 )
-texture = ExtResource( 1 )
+transform/pos = Vector2( 125, 15 )
+texture = ExtResource( 2 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Little"]
 
@@ -62,7 +63,7 @@ bounce = 0.0
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Little/StaticBody2D"]
 
 build_mode = 0
-polygon = Vector2Array( -33, -33, -33.0847, 32, -33.0847, 32, 32, 32, 32, -33.0847 )
+polygon = Vector2Array( -15, -15, -15, 15, -15, 15, 15, 15, 15, -15 )
 shape_range = Vector2( 0, 0 )
 trigger = false
 
