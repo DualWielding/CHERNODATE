@@ -7,7 +7,7 @@
 [ext_resource path="res://Object.tscn" type="PackedScene" id=5]
 [ext_resource path="res://grandecaisse.png" type="Texture" id=6]
 
-[node name="MainLevel" type="Node"]
+[node name="TestLevel" type="Node"]
 
 script/script = ExtResource( 1 )
 
