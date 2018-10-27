@@ -18,8 +18,16 @@ tile_data = IntArray( 655360, 0, 655361, 0, 655362, 0, 655363, 0, 655364, 0, 655
 
 [node name="UI" parent="." instance=ExtResource( 4 )]
 
-[node name="Object" parent="." instance=ExtResource( 5 )]
+[node name="Items" type="Node" parent="."]
+
+[node name="Object" parent="Items" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 989.763, 606.187 )
+speed_affection = 1000.0
+
+[node name="Object1" parent="Items" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 1318.54, 609.612 )
+speed_affection = -1000.0
 
 

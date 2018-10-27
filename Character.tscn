@@ -32,8 +32,8 @@ input/pickable = false
 shapes/0/shape = SubResource( 1 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1.92818, -2.0506, -12.4334 )
 shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
+collision/layers = 3
+collision/mask = 3
 collision/margin = 0.08
 script/script = ExtResource( 1 )
 

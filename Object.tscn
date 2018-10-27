@@ -12,6 +12,8 @@ points = Vector2Array( -29.2352, -28.4348, 30.924, -29.6625, 32.1517, 31.7244, -
 
 texture = ExtResource( 1 )
 script/script = ExtResource( 2 )
+speed_affection = 0.0
+rads_affection = 0.0
 
 [node name="Area" type="Area2D" parent="."]
 
@@ -23,6 +25,7 @@ gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
+collision/layers = 2
 collision/mask = 2
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area"]
