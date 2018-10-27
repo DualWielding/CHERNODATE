@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+var new_member_class = preload("res://NewMember.tscn")
+
 const GRAVITY = 2500.0
 const SPEED = 200.0
 const INITIAL_JUMP = 500.0
@@ -15,10 +17,7 @@ var is_jumping = false
 var rads = 0.0
 
 func _process(delta):
-	if rads < 100.0:
-		rads += delta
-	else:
-		rads = 100.0
+	affect_rads(delta)
 
 func _fixed_process(delta):
 	if velocity.x < MAX_SPEED:
@@ -86,3 +85,9 @@ func affect_rads(value):
 		rads = 0
 	elif rads > 100:
 		rads = 100
+	if rads / 2 != 1:
+		pop_new_member()
+
+func pop_new_member():
+	pass
+	#get_node("Sprite/Node/NewMember").show()
