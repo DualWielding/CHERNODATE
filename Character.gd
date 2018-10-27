@@ -82,3 +82,7 @@ func affect_speed(value, should_bump):
 
 func affect_rads(value):
 	rads += value
+	if rads < 0:
+		rads = 0
+	elif rads > 100:
+		rads = 100

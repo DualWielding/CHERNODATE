@@ -30,7 +30,7 @@ tile_data = IntArray( 589824, 0, 589825, 0, 589826, 0, 589827, 0, 589828, 0, 589
 
 [node name="Object" parent="Items" instance=ExtResource( 7 )]
 
-transform/pos = Vector2( 970.75, 543.955 )
+transform/pos = Vector2( 3894.11, 534.402 )
 speed_affection = 200.0
 rads_affection = 25.0
 
