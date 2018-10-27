@@ -1,39 +1,34 @@
 extends KinematicBody2D
 
-var jump_speed_decrease = 12000
-var max_jump_speed = 50000
-var current_jump_speed = 0
-var speed = 200
-var gravity = 1500
-var max_speed = 1000
-var velocity = Vector2(0, 10)
-var can_jump = false
-var is_jumping = false
+const GRAVITY = 700.0
+const SPEED = 200.0
+const JUMP_SPEED = 500.0
+var jump_numbers = 0
+var max_jumps = 2
+var velocity = Vector2()
+
+func _fixed_process(delta):
+	velocity.y += delta * GRAVITY
+	velocity.x += delta * SPEED
+
+	var motion = velocity * delta
+	motion = move(motion)
+
+	if (is_colliding()):
+		var n = get_collision_normal()
+		motion = n.slide(motion)
+		velocity = n.slide(velocity)
+		move(motion)
+		
+		if motion.y == 0:
+			jump_numbers = 0
+
+func _input(event):
+	if event.is_action_pressed("jump") and jump_numbers < max_jumps:
+		velocity.y -= JUMP_SPEED
+		jump_numbers += 1
 
 func _ready():
 	set_fixed_process(true)
 	get_node("AnimationPlayer").play("Run1")
-
-func _fixed_process(delta):
-	print(velocity.y)
-	# Y
-	if Input.is_action_pressed("jump") and (can_jump or is_jumping):
-		if can_jump:
-			velocity.y -= current_jump_speed * delta
-			can_jump = false
-			is_jumping = true
-		if is_jumping:
-			current_jump_speed -= jump_speed_decrease
-	
-	if not is_move_and_slide_on_wall():# collide bot
-		velocity.y += delta * gravity
-	else:
-		velocity.y = 0
-		can_jump = true
-		is_jumping = false
-		current_jump_speed = max_jump_speed
-	
-	# X
-	if velocity.x < max_speed:
-		velocity.x += delta * speed
-	move_and_slide(velocity)
+	set_process_input(true)
