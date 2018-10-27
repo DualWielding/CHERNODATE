@@ -77,6 +77,8 @@ func affect_speed(value, should_bump):
 			velocity.x = new_velocity
 		else:
 			velocity.x = 0
+	else:
+		velocity.x = new_velocity
 
 func affect_rads(value):
 	rads += value
