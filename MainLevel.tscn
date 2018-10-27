@@ -25,6 +25,7 @@ tile_data = IntArray( 196617, 3, 655360, 0, 655361, 0, 655362, 0, 655363, 0, 655
 
 transform/pos = Vector2( 1318.54, 609.612 )
 speed_affection = -1000.0
+is_destructible = true
 
 [node name="Object3" parent="Items" instance=ExtResource( 5 )]
 
@@ -33,6 +34,7 @@ transform/pos = Vector2( 755.909, 575.623 )
 texture = ExtResource( 6 )
 speed_affection = 200.0
 rads_affection = 1500.0
+is_destructible = true
 
 [node name="CollisionPolygon2D" parent="Items/Object3/Area"]
 
@@ -44,6 +46,7 @@ transform/scale = Vector2( 1.03294, 1.80052 )
 transform/pos = Vector2( 1010.31, 609.612 )
 speed_affection = 1000.0
 rads_affection = -50.0
+is_destructible = true
 
 
 [editable path="Items/Object3"]
