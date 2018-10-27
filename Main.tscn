@@ -26,6 +26,11 @@ tile_data = IntArray( 655360, 0, 655361, 0, 655362, 0, 655363, 0, 655364, 0, 655
 transform/pos = Vector2( 1318.54, 609.612 )
 speed_affection = -1000.0
 
+[node name="CollisionPolygon2D" parent="Items/Object1/Area"]
+
+polygon = Vector2Array( 5.85034, 3.84265, 32.3083, -32.6098, 32.1517, 31.7244, -31.2, 32.2162 )
+shape_range = Vector2( 0, 1 )
+
 [node name="Object3" parent="Items" instance=ExtResource( 5 )]
 
 editor/display_folded = true
@@ -46,4 +51,5 @@ speed_affection = 1000.0
 rads_affection = -50.0
 
 
+[editable path="Items/Object1"]
 [editable path="Items/Object3"]

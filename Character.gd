@@ -21,13 +21,14 @@ func _process(delta):
 		rads = 100.0
 
 func _fixed_process(delta):
-	velocity.y += delta * GRAVITY
 	if velocity.x < MAX_SPEED:
 		velocity.x += delta * SPEED
 	
+	velocity.y += delta * GRAVITY
 	if is_jumping and velocity.y > -MAX_JUMP:
 		velocity.y -= JUMP_INCREMENT
 	else:
+		# Adds weight to the end of the jump
 		if velocity.y < -MAX_JUMP and is_jumping:
 			velocity.y += INITIAL_JUMP / 1.5
 		is_jumping = false
@@ -41,6 +42,7 @@ func _fixed_process(delta):
 		velocity = n.slide(velocity)
 		move(motion)
 		
+		# hit the ground
 		if motion.y == 0:
 			if jump_numbers > 0:
 				get_node("AnimationPlayer").play("Run1")

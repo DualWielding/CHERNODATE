@@ -1,28 +1,20 @@
-[gd_scene load_steps=7 format=1]
+[gd_scene load_steps=6 format=1]
 
 [ext_resource path="res://tile-test.png" type="Texture" id=1]
-[ext_resource path="res://petitecaisse.png" type="Texture" id=2]
+[ext_resource path="res://Object.tscn" type="PackedScene" id=2]
 [ext_resource path="res://grandecaisse.png" type="Texture" id=3]
+[ext_resource path="res://petitecaisse.png" type="Texture" id=4]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 32, -33.0847, 32, 32, -33.0847, 32, -33.0847, 32, -33, -33 )
 
-[sub_resource type="ConvexPolygonShape2D" id=2]
-
-custom_solver_bias = 0.0
-points = Vector2Array( -1.69566, 60, -1.69566, 0, 77.4348, 0, 77.4348, 60 )
-
-[sub_resource type="ConvexPolygonShape2D" id=3]
-
-custom_solver_bias = 0.0
-points = Vector2Array( -10, 120, -10, -10, 70, -10, 70, 120 )
-
 [node name="TileSheet" type="Node2D"]
 
 [node name="Base" type="Sprite" parent="."]
 
+editor/display_folded = true
 transform/pos = Vector2( 30.5, 30.5 )
 transform/scale = Vector2( 0.921875, 0.921875 )
 texture = ExtResource( 1 )
@@ -47,59 +39,18 @@ polygon = Vector2Array( -33, -33, -33.0847, 32, -33.0847, 32, 32, 32, 32, -33.08
 shape_range = Vector2( 0, 0 )
 trigger = false
 
-[node name="PetiteCaisse" type="Sprite" parent="."]
+[node name="gCaisse" parent="." instance=ExtResource( 2 )]
 
-transform/pos = Vector2( 90, 0 )
-texture = ExtResource( 2 )
-centered = false
-
-[node name="StaticBody2D" type="StaticBody2D" parent="PetiteCaisse"]
-
-input/pickable = false
-shapes/0/shape = SubResource( 2 )
-shapes/0/transform = Matrix32( 0.884615, 0, 0, 1, 1.5, 0 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionPolygon2D" parent="PetiteCaisse/StaticBody2D"]
-
-transform/pos = Vector2( 1.5, 0 )
-transform/scale = Vector2( 0.884615, 1 )
-build_mode = 0
-polygon = Vector2Array( -1.69566, 60, -1.69566, 0, 77.4348, 0, 77.4348, 60 )
-shape_range = Vector2( 0, 0 )
-trigger = false
-
-[node name="GrandeCaisse" type="Sprite" parent="."]
-
-transform/pos = Vector2( 180, 0 )
+transform/pos = Vector2( 280, 30 )
 texture = ExtResource( 3 )
-centered = false
+speed_affection = -1000.0
+is_bumper = true
 
-[node name="StaticBody2D" type="StaticBody2D" parent="GrandeCaisse"]
+[node name="pCaisse" parent="." instance=ExtResource( 2 )]
 
-input/pickable = false
-shapes/0/shape = SubResource( 3 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 10, 10 )
-shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionPolygon2D" parent="GrandeCaisse/StaticBody2D"]
-
-transform/pos = Vector2( 10, 10 )
-build_mode = 0
-polygon = Vector2Array( -10, 120, -10, -10, 70, -10, 70, 120 )
-shape_range = Vector2( 0, 0 )
-trigger = false
+transform/pos = Vector2( 160, 70 )
+texture = ExtResource( 4 )
+speed_affection = 500.0
 
 
+[editable path="pCaisse"]
