@@ -1,11 +1,23 @@
-[gd_scene load_steps=2 format=1]
+[gd_scene load_steps=3 format=1]
 
 [ext_resource path="res://Object.tscn" type="PackedScene" id=1]
+[ext_resource path="res://NouvellesImages/props_flaque.png" type="Texture" id=2]
 
 [node name="Object" instance=ExtResource( 1 )]
 
-transform/scale = Vector2( 2, 0.5 )
+texture = ExtResource( 2 )
 speed_affection = -50.0
 rads_affection = 5.0
+is_destructible = false
+
+[node name="Area" parent="."]
+
+transform/pos = Vector2( -0.790573, 12.3855 )
+
+[node name="CollisionPolygon2D" parent="Area"]
+
+transform/pos = Vector2( -0.374866, -15.1412 )
+transform/scale = Vector2( 1.98577, 0.590917 )
+polygon = Vector2Array( -29.2208, -31.1956, 29.2248, -32.4031, 28.9853, 30.7849, -29.2208, 31.5899 )
 
 

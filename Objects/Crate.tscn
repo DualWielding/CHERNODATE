@@ -6,12 +6,12 @@
 [node name="Crate" instance=ExtResource( 1 )]
 
 texture = ExtResource( 2 )
-speed_affection = -500.0
+speed_affection = -300.0
 
 [node name="CollisionPolygon2D" parent="Area"]
 
 transform/pos = Vector2( 0, 0.860413 )
 transform/scale = Vector2( 1, 0.913959 )
-polygon = Vector2Array( -31.8636, -32.78, 32.3083, -32.6098, 32.3134, 30.6282, -31.8636, 30.6282 )
+polygon = Vector2Array( -28.1091, -28.8062, 27.3045, -28.2858, 27.7802, 26.6198, -27.8713, 26.3596 )
 
 
