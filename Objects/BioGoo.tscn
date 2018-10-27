@@ -6,7 +6,7 @@
 [node name="Object" instance=ExtResource( 1 )]
 
 texture = ExtResource( 2 )
-speed_affection = -50.0
+speed_affection = -100.0
 rads_affection = 5.0
 is_destructible = false
 
@@ -18,6 +18,6 @@ transform/pos = Vector2( -0.790573, 12.3855 )
 
 transform/pos = Vector2( -0.374866, -15.1412 )
 transform/scale = Vector2( 1.98577, 0.590917 )
-polygon = Vector2Array( -29.2208, -31.1956, 29.2248, -32.4031, 28.9853, 30.7849, -29.2208, 31.5899 )
+polygon = Vector2Array( -29.4604, -47.6969, 29.1051, -47.6969, 28.9853, 30.7849, -29.2208, 31.5899 )
 
 
