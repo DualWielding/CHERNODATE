@@ -23,7 +23,7 @@ tile_data = IntArray( 196617, 3, 655732, 1, 655733, 1, 655734, 1, 655735, 1, 655
 
 [node name="Character" parent="." instance=ExtResource( 4 )]
 
-transform/pos = Vector2( 173.372, 524.666 )
+transform/pos = Vector2( 368.584, 315.754 )
 transform/scale = Vector2( 0.75, 0.75 )
 
 [node name="CollisionShape2D" parent="Character"]
