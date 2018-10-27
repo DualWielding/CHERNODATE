@@ -1,17 +1,55 @@
-[gd_scene load_steps=5 format=1]
+[gd_scene load_steps=7 format=1]
 
 [ext_resource path="res://Character.gd" type="Script" id=1]
-[ext_resource path="res://perso_run2_membres.png" type="Texture" id=2]
+[ext_resource path="res://run_finale.png" type="Texture" id=2]
+[ext_resource path="res://jump.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 32.1675, 31.907 )
+extents = Vector2( 32.1675, 21.9879 )
+
+[sub_resource type="Animation" id=3]
+
+resource/name = "Jump"
+length = 0.1
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 3 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:hframes")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ 1 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:frame")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
 
 [sub_resource type="Animation" id=2]
 
 resource/name = "Run1"
-length = 0.3
+length = 0.5
 loop = true
 step = 0.1
 tracks/0/type = "value"
@@ -19,10 +57,30 @@ tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
 tracks/0/imported = false
 tracks/0/keys = {
-"times": FloatArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ),
-"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": FloatArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": FloatArray( 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 0, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2 ]
+"values": [ 0, 1, 2, 3, 4 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:texture")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 2 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:hframes")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ 5 ]
 }
 
 [node name="Character" type="KinematicBody2D"]
@@ -30,7 +88,7 @@ tracks/0/keys = {
 transform/pos = Vector2( 278.967, 480.465 )
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1.92818, -2.0506, -12.4334 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1.79503, -1.51025, 0.210266 )
 shapes/0/trigger = false
 collision/layers = 3
 collision/mask = 3
@@ -41,12 +99,13 @@ script/script = ExtResource( 1 )
 
 transform/scale = Vector2( 0.75, 0.75 )
 texture = ExtResource( 2 )
-hframes = 3
+hframes = 5
+frame = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
-transform/pos = Vector2( -2.0506, -12.4334 )
-transform/scale = Vector2( 1, 1.92818 )
+transform/pos = Vector2( -1.51025, 0.210266 )
+transform/scale = Vector2( 1, 1.79503 )
 shape = SubResource( 1 )
 trigger = false
 _update_shape_index = 0
@@ -76,6 +135,7 @@ drag_margin/bottom = 0.2
 playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
+anims/Jump = SubResource( 3 )
 anims/Run1 = SubResource( 2 )
 playback/active = true
 playback/speed = 1.0

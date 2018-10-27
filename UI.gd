@@ -7,5 +7,5 @@ func _ready():
 	set_process(true)
 
 func _process(delta):
-	get_node("Rads").set_text(str("RADS : ", character.get_rads()))
 	get_node("Speed").set_text(str("SPEED : ", character.get_speed()))
+	get_node("Radsbar").set_value(character.get_rads())

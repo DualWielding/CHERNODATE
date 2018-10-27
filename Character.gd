@@ -1,11 +1,11 @@
 extends KinematicBody2D
 
-const GRAVITY = 700.0
+const GRAVITY = 2500.0
 const SPEED = 200.0
-const INITIAL_JUMP = 300.0
-const MAX_JUMP = 500.0
+const INITIAL_JUMP = 500.0
+const MAX_JUMP = 750.0
 const JUMP_INCREMENT = 100.0
-const MAX_SPEED = 1000.0
+const MAX_SPEED = 850.0
 var jump_numbers = 0
 var max_jumps = 2
 var velocity = Vector2()
@@ -42,10 +42,13 @@ func _fixed_process(delta):
 		move(motion)
 		
 		if motion.y == 0:
+			if jump_numbers > 0:
+				get_node("AnimationPlayer").play("Run1")
 			jump_numbers = 0
 
 func _input(event):
 	if event.is_action_pressed("jump") and jump_numbers < max_jumps:
+		get_node("AnimationPlayer").play("Jump")
 		velocity.y -= INITIAL_JUMP
 		jump_numbers += 1
 		is_jumping = true
@@ -56,8 +59,8 @@ func _input(event):
 func _ready():
 	set_fixed_process(true)
 	set_process(true)
-	get_node("AnimationPlayer").play("Run1")
 	set_process_input(true)
+	get_node("AnimationPlayer").play("Run1")
 
 func get_rads():
 	return rads
@@ -65,8 +68,13 @@ func get_rads():
 func get_speed():
 	return velocity.x
 
-func affect_speed(value):
-	velocity.x += value
+func affect_speed(value, should_bump):
+	var new_velocity =  velocity.x + value
+	if new_velocity < 0:
+		if should_bump:
+			velocity.x = new_velocity
+		else:
+			velocity.x = 0
 
 func affect_rads(value):
 	rads += value
