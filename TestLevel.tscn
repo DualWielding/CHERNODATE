@@ -1,12 +1,11 @@
-[gd_scene load_steps=8 format=1]
+[gd_scene load_steps=7 format=1]
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
 [ext_resource path="res://Background.tscn" type="PackedScene" id=2]
 [ext_resource path="res://TileMap.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Tset.res" type="TileSet" id=4]
-[ext_resource path="res://Character.tscn" type="PackedScene" id=5]
-[ext_resource path="res://UI.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Object.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Character.tscn" type="PackedScene" id=4]
+[ext_resource path="res://UI.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Object.tscn" type="PackedScene" id=6]
 
 [node name="TestLevel" type="Node"]
 
@@ -19,16 +18,15 @@ scroll/base_scale = Vector2( 2, 0 )
 
 [node name="TileMap" parent="." instance=ExtResource( 3 )]
 
-tile_set = ExtResource( 4 )
-tile_data = IntArray( 589824, 0, 589825, 0, 589826, 0, 589827, 0, 589828, 0, 589829, 0, 589830, 0, 589831, 0, 589832, 0, 589833, 0, 589834, 0, 589835, 0, 589836, 0, 589837, 0, 589838, 0, 589839, 0, 589840, 0, 589841, 0, 589842, 0, 589843, 0, 589844, 0, 589845, 0, 589846, 0, 589847, 0, 589848, 0, 589849, 0, 589850, 0, 589851, 0, 589852, 0, 589853, 0, 589854, 0, 589855, 0, 589856, 0, 589857, 0, 589858, 0, 589859, 0, 589860, 0, 589861, 0, 589862, 0, 589863, 0, 589864, 0, 589865, 0, 589866, 0, 589867, 0, 589868, 0, 589869, 0, 589870, 0, 589871, 0, 589872, 0, 589873, 0, 589874, 0, 589875, 0, 589876, 0, 589877, 0, 589878, 0, 589879, 0, 589880, 0, 589881, 0, 589882, 0, 589883, 0, 589884, 0, 589885, 0, 589886, 0, 589887, 0, 589888, 0, 589889, 0, 589890, 0, 589891, 0, 589892, 0, 589893, 0, 589894, 0, 589895, 0, 589896, 0, 589897, 0, 589898, 0, 589899, 0, 589900, 0, 589901, 0, 589902, 0, 589903, 0, 589904, 0, 589905, 0, 589906, 0, 589907, 0, 589908, 0, 589909, 0, 589910, 0, 589911, 0, 589912, 0, 589913, 0, 589914, 0, 589915, 0 )
+tile_data = IntArray( 196617, 3, 589824, 0, 589825, 0, 589826, 0, 589827, 0, 589828, 0, 589829, 0, 589830, 0, 589831, 0, 589832, 0, 589833, 0, 589834, 0, 589835, 0, 589836, 0, 589837, 0, 589838, 0, 589839, 0, 589840, 0, 589841, 0, 589842, 0, 589843, 0, 589844, 0, 589845, 0, 589846, 0, 589847, 0, 589848, 0, 589849, 0, 589850, 0, 589851, 0, 589852, 0, 589853, 0, 589854, 0, 589855, 0, 589856, 0, 589857, 0, 589858, 0, 589859, 0, 589860, 0, 589861, 0, 589862, 0, 589863, 0, 589864, 0, 589865, 0, 589866, 0, 589867, 0, 589868, 0, 589869, 0, 589870, 0, 589871, 0, 589872, 0, 589873, 0, 589874, 0, 589875, 0, 589876, 0, 589877, 0, 589878, 0, 589879, 0, 589880, 0, 589881, 0, 589882, 0, 589883, 0, 589884, 0, 589885, 0, 589886, 0, 589887, 0, 589888, 0, 589889, 0, 589890, 0, 589891, 0, 589892, 0, 589893, 0, 589894, 0, 589895, 0, 589896, 0, 589897, 0, 589898, 0, 589899, 0, 589900, 0, 589901, 0, 589902, 0, 589903, 0, 589904, 0, 589905, 0, 589906, 0, 589907, 0, 589908, 0, 589909, 0, 589910, 0, 589911, 0, 589912, 0, 589913, 0, 589914, 0, 589915, 0, 589916, 0, 589917, 1 )
 
-[node name="Character" parent="." instance=ExtResource( 5 )]
+[node name="Character" parent="." instance=ExtResource( 4 )]
 
-[node name="UI" parent="." instance=ExtResource( 6 )]
+[node name="UI" parent="." instance=ExtResource( 5 )]
 
 [node name="Items" type="Node" parent="."]
 
-[node name="Object" parent="Items" instance=ExtResource( 7 )]
+[node name="Object" parent="Items" instance=ExtResource( 6 )]
 
 transform/pos = Vector2( 3894.11, 534.402 )
 speed_affection = 200.0
