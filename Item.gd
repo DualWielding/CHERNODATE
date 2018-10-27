@@ -6,7 +6,10 @@ export var is_bumper = false
 export var is_destructible = true
 
 func destroy():
-	get_node("AnimationPlayer").play("Destroy")
+	var node = get_node("AnimationPlayer 2")
+	if node == null:
+		node = get_node("AnimationPlayer")
+	node.play("Destroy")
 
 func _on_Area_area_enter( area ):
 	var body = area.get_parent()

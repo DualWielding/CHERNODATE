@@ -136,11 +136,13 @@ transform/scale = Vector2( 1, 1.64844 )
 
 [node name="BioCrates" type="Node" parent="Items"]
 
-editor/display_folded = true
-
 [node name="Object" parent="Items/BioCrates" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 4951.57, 622.362 )
+
+[node name="Area" parent="Items/BioCrates/Object"]
+
+editor/display_folded = true
 
 [node name="Object1" parent="Items/BioCrates" instance=ExtResource( 7 )]
 
@@ -282,3 +284,4 @@ transform/pos = Vector2( 24988.5, 355.032 )
 
 
 [editable path="Character"]
+[editable path="Items/BioCrates/Object"]

@@ -16,6 +16,10 @@ var is_jumping = false
 
 var rads = 0.0
 
+var possible_mutations
+var taken_mutations = []
+var mutation_level = 0
+
 func _process(delta):
 	affect_rads(delta)
 
@@ -42,7 +46,7 @@ func _fixed_process(delta):
 		move(motion)
 		
 		# hit the ground
-		if motion.y == 0:
+		if motion.y < 0.1:
 			if jump_numbers > 0:
 				get_node("AnimationPlayer").play("Run1")
 			jump_numbers = 0
@@ -62,6 +66,17 @@ func _ready():
 	set_process(true)
 	set_process_input(true)
 	get_node("AnimationPlayer").play("Run1")
+	possible_mutations = [
+		get_node("Mut1"),
+		get_node("Mut2"),
+		get_node("Mut3"),
+		get_node("Mut4"),
+		get_node("Mut5"),
+		get_node("Mut6"),
+		get_node("Mut7"),
+		get_node("Mut8"),
+		get_node("Mut9"),
+	]
 
 func get_rads():
 	return rads
@@ -85,9 +100,32 @@ func affect_rads(value):
 		rads = 0
 	elif rads > 100:
 		rads = 100
-	if rads / 2 != 1:
-		pop_new_member()
+	
+	if value > 0:
+		var number_of_mutations = int(rads) / 10 - mutation_level
+		for i in range(number_of_mutations):
+			pop_mutation()
+	if value < 0:
+		var number_of_mutations = mutation_level - int(rads) / 10
+		for i in range(number_of_mutations):
+			depop_mutation()
 
-func pop_new_member():
-	pass
-	#get_node("Sprite/Node/NewMember").show()
+func pop_mutation():
+	if possible_mutations.size() > 0:
+		mutation_level += 1
+		randomize()
+		var idx = randi() % possible_mutations.size()
+		var mutation = possible_mutations[idx]
+		possible_mutations.remove(idx)
+		taken_mutations.append(mutation)
+		mutation.activate()
+
+func depop_mutation():
+	if taken_mutations.size() > 0:
+		randomize()
+		mutation_level -= 1
+		var idx = randi() % taken_mutations.size()
+		var mutation = taken_mutations[idx]
+		taken_mutations.remove(idx)
+		possible_mutations.append(mutation)
+		mutation.deactivate()

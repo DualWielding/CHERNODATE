@@ -1,10 +1,9 @@
-[gd_scene load_steps=10 format=1]
+[gd_scene load_steps=9 format=1]
 
 [ext_resource path="res://Character.gd" type="Script" id=1]
 [ext_resource path="res://Mutation.tscn" type="PackedScene" id=2]
 [ext_resource path="res://character/jump2.tex" type="Texture" id=3]
 [ext_resource path="res://character/run_2.tex" type="Texture" id=4]
-[ext_resource path="res://character/main_test2.tex" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -48,130 +47,120 @@ tracks/2/keys = {
 "values": [ 0 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Mutation9:transform/pos")
+tracks/3/path = NodePath("Mut1:transform/pos")
 tracks/3/interp = 1
 tracks/3/imported = false
 tracks/3/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
-"values": [ Vector2( 3.67731, -44.2474 ) ]
+"values": [ Vector2( -43.4449, -35.9877 ) ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("Mut1:transform/pos")
+tracks/4/path = NodePath("Mut2:transform/pos")
 tracks/4/interp = 1
 tracks/4/imported = false
 tracks/4/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
-"values": [ Vector2( -43.4449, -35.9877 ) ]
+"values": [ Vector2( -59.8936, -24.2726 ) ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("Mut2:transform/pos")
+tracks/5/path = NodePath("Mut3:transform/rot")
 tracks/5/interp = 1
 tracks/5/imported = false
 tracks/5/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
-"values": [ Vector2( -59.8936, -24.2726 ) ]
+"values": [ 0.0 ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("Mut3:transform/rot")
+tracks/6/path = NodePath("Mut3:transform/pos")
 tracks/6/interp = 1
 tracks/6/imported = false
 tracks/6/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
-"values": [ 0.0 ]
+"values": [ Vector2( -16.077, 20.2179 ) ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("Mut3:transform/pos")
+tracks/7/path = NodePath("Mut4:transform/rot")
 tracks/7/interp = 1
 tracks/7/imported = false
 tracks/7/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
-"values": [ Vector2( -16.077, 20.2179 ) ]
+"values": [ 180.0 ]
 }
 tracks/8/type = "value"
-tracks/8/path = NodePath("Mut4:transform/rot")
+tracks/8/path = NodePath("Mut4:transform/pos")
 tracks/8/interp = 1
 tracks/8/imported = false
 tracks/8/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
-"values": [ 180.0 ]
+"values": [ Vector2( -20.0893, 31.9933 ) ]
 }
 tracks/9/type = "value"
-tracks/9/path = NodePath("Mut4:transform/pos")
+tracks/9/path = NodePath("Mut5:transform/rot")
 tracks/9/interp = 1
 tracks/9/imported = false
 tracks/9/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
-"values": [ Vector2( -20.0893, 31.9933 ) ]
+"values": [ 0.0 ]
 }
 tracks/10/type = "value"
-tracks/10/path = NodePath("Mut5:transform/rot")
+tracks/10/path = NodePath("Mut5:transform/pos")
 tracks/10/interp = 1
 tracks/10/imported = false
 tracks/10/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
-"values": [ 0.0 ]
+"values": [ Vector2( 27.8624, 8.02017 ) ]
 }
 tracks/11/type = "value"
-tracks/11/path = NodePath("Mut5:transform/pos")
+tracks/11/path = NodePath("Mut6:transform/pos")
 tracks/11/interp = 1
 tracks/11/imported = false
 tracks/11/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
-"values": [ Vector2( 27.8624, 8.02017 ) ]
+"values": [ Vector2( 24.0255, -28.088 ) ]
 }
 tracks/12/type = "value"
-tracks/12/path = NodePath("Mut6:transform/pos")
+tracks/12/path = NodePath("Mut7:transform/pos")
 tracks/12/interp = 1
 tracks/12/imported = false
 tracks/12/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
-"values": [ Vector2( 24.0255, -28.088 ) ]
+"values": [ Vector2( 15.7201, -56.0223 ) ]
 }
 tracks/13/type = "value"
-tracks/13/path = NodePath("Mut7:transform/pos")
+tracks/13/path = NodePath("Mut8:transform/pos")
 tracks/13/interp = 1
 tracks/13/imported = false
 tracks/13/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
-"values": [ Vector2( 15.7201, -56.0223 ) ]
+"values": [ Vector2( -3.88452, -64.0171 ) ]
 }
 tracks/14/type = "value"
-tracks/14/path = NodePath("Mut8:transform/pos")
+tracks/14/path = NodePath("Mut9:transform/pos")
 tracks/14/interp = 1
 tracks/14/imported = false
 tracks/14/keys = {
-"times": FloatArray( 0 ),
-"transitions": FloatArray( 1 ),
-"update": 0,
-"values": [ Vector2( -3.88452, -64.0171 ) ]
-}
-tracks/15/type = "value"
-tracks/15/path = NodePath("Mut9:transform/pos")
-tracks/15/interp = 1
-tracks/15/imported = false
-tracks/15/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 0,
@@ -353,16 +342,19 @@ script/script = ExtResource( 1 )
 
 [node name="Mut1" parent="." instance=ExtResource( 2 )]
 
+visibility/visible = false
 transform/pos = Vector2( -43.4449, -35.9877 )
 
 [node name="Mut2" parent="." instance=ExtResource( 2 )]
 
+visibility/visible = false
 transform/pos = Vector2( -59.8936, -24.2726 )
 transform/rot = 90.0
 flip_h = true
 
 [node name="Mut4" parent="." instance=ExtResource( 2 )]
 
+visibility/visible = false
 transform/pos = Vector2( -20.0893, 31.9933 )
 transform/rot = 180.0
 flip_h = true
@@ -381,16 +373,19 @@ autoplay = ""
 
 [node name="Mut6" parent="." instance=ExtResource( 2 )]
 
+visibility/visible = false
 transform/pos = Vector2( 24.0255, -28.088 )
 transform/rot = -90.0
 
 [node name="Mut7" parent="." instance=ExtResource( 2 )]
 
+visibility/visible = false
 transform/pos = Vector2( 15.7201, -56.0223 )
 transform/rot = -90.0
 
 [node name="Mut8" parent="." instance=ExtResource( 2 )]
 
+visibility/visible = false
 transform/pos = Vector2( -3.88452, -64.0171 )
 modulate = Color( 0.556863, 0.192157, 0.137255, 1 )
 
@@ -400,29 +395,21 @@ texture = ExtResource( 3 )
 
 [node name="Mut3" parent="." instance=ExtResource( 2 )]
 
+visibility/visible = false
 transform/pos = Vector2( -16.077, 20.2179 )
 flip_h = true
 
 [node name="Mut5" parent="." instance=ExtResource( 2 )]
 
+visibility/visible = false
 transform/pos = Vector2( 27.8624, 8.02017 )
 
 [node name="Mut9" parent="." instance=ExtResource( 2 )]
 
+visibility/visible = false
 transform/pos = Vector2( 4.13071, -48.075 )
 transform/rot = 90.0
 modulate = Color( 0.556863, 0.192157, 0.137255, 1 )
-
-[node name="Mutation9" type="Sprite" parent="."]
-
-visibility/visible = false
-transform/pos = Vector2( 3.67731, -44.2474 )
-transform/rot = 90.0
-texture = ExtResource( 5 )
-centered = false
-offset = Vector2( -60.322, -63.2826 )
-hframes = 5
-modulate = Color( 0.556863, 0.196078, 0.137255, 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
@@ -447,12 +434,12 @@ limit/right = 10000000
 limit/bottom = 0
 drag_margin/h_enabled = true
 drag_margin/v_enabled = true
-smoothing/enable = true
+smoothing/enable = false
 smoothing/speed = 5.0
-drag_margin/left = 0.2
-drag_margin/top = 0.2
-drag_margin/right = 0.2
-drag_margin/bottom = 0.2
+drag_margin/left = 0.0
+drag_margin/top = 0.0
+drag_margin/right = 0.0
+drag_margin/bottom = 0.0
 
 [node name="HitBox" type="Area2D" parent="."]
 
