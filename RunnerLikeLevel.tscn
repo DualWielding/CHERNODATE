@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=1]
+[gd_scene load_steps=8 format=1]
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
 [ext_resource path="res://Background.tscn" type="PackedScene" id=2]
 [ext_resource path="res://TileMap.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Character.tscn" type="PackedScene" id=4]
 [ext_resource path="res://UI.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Objects/Crate.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Objects/BioGoo.tscn" type="PackedScene" id=7]
 
 [node name="RunnerLikeLevel" type="Node"]
 
@@ -14,8 +16,40 @@ script/script = ExtResource( 1 )
 
 [node name="TileMap" parent="." instance=ExtResource( 3 )]
 
+tile_data = IntArray( 196617, 3, 589888, 0, 655360, 0, 655361, 0, 655362, 0, 655363, 0, 655364, 0, 655365, 0, 655366, 0, 655367, 0, 655368, 0, 655369, 0, 655370, 0, 655371, 0, 655372, 0, 655373, 0, 655374, 0, 655375, 0, 655376, 0, 655377, 0, 655378, 0, 655379, 0, 655380, 0, 655381, 0, 655382, 0, 655383, 0, 655384, 0, 655385, 0, 655386, 0, 655387, 0, 655388, 0, 655389, 0, 655390, 0, 655391, 0, 655392, 0, 655393, 0, 655394, 0, 655395, 0, 655396, 0, 655397, 0, 655398, 0, 655399, 0, 655400, 0, 655401, 0, 655402, 0, 655403, 0, 655404, 0, 655405, 0, 655406, 0, 655407, 0, 655408, 0, 655409, 0, 655410, 0, 655411, 0, 655412, 0, 655413, 0, 655414, 0, 655415, 0, 655416, 0, 655417, 0, 655418, 0, 655419, 0, 655420, 0, 655421, 0, 655422, 0, 655423, 0, 655424, 0, 655425, 0, 655426, 0, 655427, 0, 655428, 0, 655429, 0, 655430, 0, 655431, 0, 655432, 0, 655433, 0, 655434, 0, 655435, 0, 655436, 0, 655437, 0, 655438, 0, 655439, 0, 655440, 0, 655441, 0, 655442, 0, 655443, 0, 655444, 0, 655445, 0, 655446, 0, 655447, 0, 655448, 0, 655449, 0, 655450, 0, 655451, 0, 655452, 0, 655453, 0, 655454, 0, 655455, 0, 655456, 0, 655457, 0, 655458, 0, 655459, 0, 655460, 0, 655461, 0, 655462, 0, 655463, 0, 655464, 0, 655465, 0, 655466, 0, 655467, 0, 655468, 0, 655469, 0, 655470, 0, 655471, 0, 655472, 0, 655473, 0, 655474, 0, 655475, 0, 655476, 0, 655477, 0, 655478, 0, 655479, 0, 655480, 0, 655481, 0, 655482, 0, 655483, 0, 655484, 0, 655485, 0, 655486, 0, 655487, 0, 655488, 0, 655489, 0, 655490, 0, 655491, 0, 655492, 0, 655493, 0 )
+
 [node name="Character" parent="." instance=ExtResource( 4 )]
 
 [node name="UI" parent="." instance=ExtResource( 5 )]
+
+[node name="Crate" parent="." instance=ExtResource( 6 )]
+
+transform/pos = Vector2( 1528.53, 614.013 )
+
+[node name="Crate1" parent="." instance=ExtResource( 6 )]
+
+transform/pos = Vector2( 2532.99, 590.258 )
+transform/scale = Vector2( 1, 1.89733 )
+
+[node name="Crate3" parent="." instance=ExtResource( 6 )]
+
+transform/pos = Vector2( 4056.57, 588.352 )
+transform/scale = Vector2( 1, 1.89733 )
+
+[node name="Crate2" parent="." instance=ExtResource( 6 )]
+
+transform/pos = Vector2( 4125.75, 611.385 )
+
+[node name="Crate4" parent="." instance=ExtResource( 6 )]
+
+transform/pos = Vector2( 8004.69, 602.628 )
+
+[node name="Object" parent="." instance=ExtResource( 7 )]
+
+transform/pos = Vector2( 5298.08, 640.07 )
+
+[node name="Object1" parent="." instance=ExtResource( 7 )]
+
+transform/pos = Vector2( 5169.06, 640.906 )
 
 
