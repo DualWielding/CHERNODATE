@@ -4,8 +4,8 @@
 [ext_resource path="res://TileMap.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Character.tscn" type="PackedScene" id=3]
 [ext_resource path="res://UI.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Crate.tscn" type="PackedScene" id=5]
-[ext_resource path="res://BioCrate.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Object.tscn" type="PackedScene" id=5]
+[ext_resource path="res://grandecaisse.png" type="Texture" id=6]
 
 [node name="MainLevel" type="Node"]
 
@@ -21,12 +21,29 @@ tile_data = IntArray( 655360, 0, 655361, 0, 655362, 0, 655363, 0, 655364, 0, 655
 
 [node name="Items" type="Node" parent="."]
 
-[node name="Crate" parent="Items" instance=ExtResource( 5 )]
+[node name="Object1" parent="Items" instance=ExtResource( 5 )]
 
-transform/pos = Vector2( 1160.26, 610.942 )
+transform/pos = Vector2( 1318.54, 609.612 )
+speed_affection = -1000.0
 
-[node name="Object" parent="Items" instance=ExtResource( 6 )]
+[node name="Object3" parent="Items" instance=ExtResource( 5 )]
 
-transform/pos = Vector2( 1412.79, 597.6 )
+editor/display_folded = true
+transform/pos = Vector2( 755.909, 575.623 )
+texture = ExtResource( 6 )
+speed_affection = 200.0
+rads_affection = 1500.0
+
+[node name="CollisionPolygon2D" parent="Items/Object3/Area"]
+
+transform/pos = Vector2( 0.329437, -8.00522 )
+transform/scale = Vector2( 1.03294, 1.80052 )
+
+[node name="Object2" parent="Items" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 1010.31, 609.612 )
+speed_affection = 1000.0
+rads_affection = -50.0
 
 
+[editable path="Items/Object3"]

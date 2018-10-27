@@ -5,7 +5,7 @@
 [ext_resource path="res://Character.tscn" type="PackedScene" id=3]
 [ext_resource path="res://UI.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Object.tscn" type="PackedScene" id=5]
-[ext_resource path="res://BioCrate.tscn" type="PackedScene" id=6]
+[ext_resource path="res://grandecaisse.png" type="Texture" id=6]
 
 [node name="MainLevel" type="Node"]
 
@@ -31,15 +31,25 @@ speed_affection = -1000.0
 polygon = Vector2Array( 5.85034, 3.84265, 32.3083, -32.6098, 32.1517, 31.7244, -31.2, 32.2162 )
 shape_range = Vector2( 0, 1 )
 
+[node name="Object3" parent="Items" instance=ExtResource( 5 )]
+
+editor/display_folded = true
+transform/pos = Vector2( 755.909, 575.623 )
+texture = ExtResource( 6 )
+speed_affection = 200.0
+rads_affection = 1500.0
+
+[node name="CollisionPolygon2D" parent="Items/Object3/Area"]
+
+transform/pos = Vector2( 0.329437, -8.00522 )
+transform/scale = Vector2( 1.03294, 1.80052 )
+
 [node name="Object2" parent="Items" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 1010.31, 609.612 )
 speed_affection = 1000.0
 rads_affection = -50.0
 
-[node name="Object" parent="Items" instance=ExtResource( 6 )]
-
-transform/pos = Vector2( 819.082, 606.339 )
-
 
 [editable path="Items/Object1"]
+[editable path="Items/Object3"]
