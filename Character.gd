@@ -5,15 +5,25 @@ const SPEED = 200.0
 const INITIAL_JUMP = 250.0
 const MAX_JUMP = 500.0
 const JUMP_INCREMENT = 50.0
+const MAX_SPEED = 1000.0
 var jump_numbers = 0
 var max_jumps = 2
 var velocity = Vector2()
 
 var is_jumping = false
 
+var rads = 0.0
+
+func _process(delta):
+	if rads < 100.0:
+		rads += delta
+	else:
+		rads = 100.0
+
 func _fixed_process(delta):
 	velocity.y += delta * GRAVITY
-	velocity.x += delta * SPEED
+	if velocity.x < MAX_SPEED:
+		velocity.x += delta * SPEED
 	
 	if is_jumping and velocity.y > -MAX_JUMP:
 		velocity.y -= JUMP_INCREMENT
@@ -43,5 +53,12 @@ func _input(event):
 
 func _ready():
 	set_fixed_process(true)
+	set_process(true)
 	get_node("AnimationPlayer").play("Run1")
 	set_process_input(true)
+
+func get_rads():
+	return rads
+
+func get_speed():
+	return velocity.x
