@@ -12,14 +12,14 @@ rotation = 0.0
 scale = Vector2( 1, 1 )
 scroll/offset = Vector2( 0, 0 )
 scroll/base_offset = Vector2( 0, 0 )
-scroll/base_scale = Vector2( 1, 0 )
+scroll/base_scale = Vector2( 1, 1 )
 scroll/limit_begin = Vector2( 0, 0 )
 scroll/limit_end = Vector2( 0, 0 )
 scroll/ignore_camera_zoom = true
 
 [node name="Sky" type="ParallaxLayer" parent="."]
 
-motion/scale = Vector2( 1, 1 )
+motion/scale = Vector2( 0.2, 1 )
 motion/offset = Vector2( 0, 0 )
 motion/mirroring = Vector2( 0, 0 )
 
@@ -32,7 +32,7 @@ region_rect = Rect2( 0, 0, 50120, 720 )
 
 [node name="Mountains" type="ParallaxLayer" parent="."]
 
-motion/scale = Vector2( 0.3, 0.3 )
+motion/scale = Vector2( 0.3, 1 )
 motion/offset = Vector2( 0, 0 )
 motion/mirroring = Vector2( 0, 0 )
 
@@ -45,7 +45,7 @@ region_rect = Rect2( 0, 0, 50120, 720 )
 
 [node name="Trees" type="ParallaxLayer" parent="."]
 
-motion/scale = Vector2( 0.4, 0.4 )
+motion/scale = Vector2( 0.4, 1 )
 motion/offset = Vector2( 0, 0 )
 motion/mirroring = Vector2( 0, 0 )
 
