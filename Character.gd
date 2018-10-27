@@ -3,10 +3,10 @@ extends KinematicBody2D
 var new_member_class = preload("res://NewMember.tscn")
 
 const GRAVITY = 2500.0
-const SPEED = 200.0
+const SPEED = 250.0
 const INITIAL_JUMP = 500.0
-const MAX_JUMP = 750.0
-const JUMP_INCREMENT = 100.0
+const MAX_JUMP = 850.0
+const JUMP_INCREMENT = 300.0
 const MAX_SPEED = 850.0
 var jump_numbers = 0
 var max_jumps = 2
