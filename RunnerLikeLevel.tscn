@@ -841,7 +841,7 @@ transform/pos = Vector2( 36820.9, 411.89 )
 
 [node name="Object16" parent="Items/PowerUp" instance=ExtResource( 9 )]
 
-transform/pos = Vector2( 41802.7, 520.233 )
+transform/pos = Vector2( 41795, 374.102 )
 
 [node name="Object 2" parent="Items/PowerUp" instance=ExtResource( 10 )]
 
@@ -917,6 +917,6 @@ transform/pos = Vector2( 39684.2, 528.097 )
 
 [node name="Object17" parent="Items/PowerUp" instance=ExtResource( 10 )]
 
-transform/pos = Vector2( 41801.5, 368.355 )
+transform/pos = Vector2( 41791.5, 511.292 )
 
 
