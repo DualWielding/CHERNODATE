@@ -1,11 +1,29 @@
-[gd_scene load_steps=3 format=1]
+[gd_scene load_steps=4 format=1]
 
 [ext_resource path="res://Object.tscn" type="PackedScene" id=1]
-[ext_resource path="res://NouvellesImages/props_flaque.png" type="Texture" id=2]
+[ext_resource path="res://NouvellesImages/props_flaque_anim.png" type="Texture" id=2]
+
+[sub_resource type="Animation" id=1]
+
+resource/name = "AllDayLong"
+length = 1.0
+loop = true
+step = 0.15
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 0.15, 0.3, 0.45, 0.6, 0.75, 0.9 ),
+"transitions": FloatArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6 ]
+}
 
 [node name="Object" instance=ExtResource( 1 )]
 
 texture = ExtResource( 2 )
+hframes = 7
 speed_affection = -100.0
 rads_affection = 5.0
 is_destructible = false
@@ -19,5 +37,16 @@ transform/pos = Vector2( -0.790573, 12.3855 )
 transform/pos = Vector2( -0.374866, -15.1412 )
 transform/scale = Vector2( 1.98577, 0.590917 )
 polygon = Vector2Array( -29.2208, -31.1956, 29.2248, -32.4031, 28.9853, 30.7849, -29.2208, 31.5899 )
+
+[node name="AllDayLongAnim" type="AnimationPlayer" parent="."]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/AllDayLong = SubResource( 1 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = ""
 
 
