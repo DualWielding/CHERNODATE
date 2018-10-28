@@ -5,7 +5,13 @@ export var rads_affection = 0.0
 export var is_bumper = false
 export var is_destructible = true
 
+func _ready():
+	var node = get_node("AllDayLongAnim")
+	if node != null:
+		node.play("AllDayLong")
+
 func destroy():
+	get_node("Area").set_layer_mask_bit(1, false)
 	var node = get_node("AnimationPlayer 2")
 	if node == null:
 		node = get_node("AnimationPlayer")

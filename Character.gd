@@ -76,6 +76,7 @@ func _ready():
 		get_node("Mut7"),
 		get_node("Mut8"),
 		get_node("Mut9"),
+		get_node("Mut10")
 	]
 
 func get_rads():
