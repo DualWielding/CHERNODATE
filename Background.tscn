@@ -41,7 +41,7 @@ motion/mirroring = Vector2( 0, 0 )
 texture = ExtResource( 2 )
 centered = false
 region = true
-region_rect = Rect2( 0, 0, 32768, 720 )
+region_rect = Rect2( 0, 0, 65536, 720 )
 
 [node name="Trees" type="ParallaxLayer" parent="."]
 
