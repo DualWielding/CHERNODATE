@@ -5,3 +5,4 @@ func get_character():
 
 func end(rads_level):
 	get_node("UI/End").trigger(rads_level)
+	
