@@ -1,16 +1,54 @@
-[gd_scene load_steps=12 format=1]
+[gd_scene load_steps=14 format=1]
 
 [ext_resource path="res://Character.gd" type="Script" id=1]
 [ext_resource path="res://Mutation.tscn" type="PackedScene" id=2]
-[ext_resource path="res://character/jump2.tex" type="Texture" id=3]
-[ext_resource path="res://character/run_2.tex" type="Texture" id=4]
-[ext_resource path="res://Carnivorous.gd" type="Script" id=5]
-[ext_resource path="res://character/fleurmutante_anim.png" type="Texture" id=6]
+[ext_resource path="res://character/idle_avant_course.tex" type="Texture" id=3]
+[ext_resource path="res://character/jump2.tex" type="Texture" id=4]
+[ext_resource path="res://character/run_2.tex" type="Texture" id=5]
+[ext_resource path="res://Carnivorous.gd" type="Script" id=6]
+[ext_resource path="res://character/fleurmutante_anim.png" type="Texture" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 32.1675, 32.2625 )
+
+[sub_resource type="Animation" id=6]
+
+resource/name = "Idle_before"
+length = 0.5
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 3 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:hframes")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 0 ),
+"transitions": FloatArray( 1 ),
+"update": 1,
+"values": [ 5 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:frame")
+tracks/2/interp = 1
+tracks/2/imported = false
+tracks/2/keys = {
+"times": FloatArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": FloatArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4 ]
+}
 
 [sub_resource type="Animation" id=2]
 
@@ -26,7 +64,7 @@ tracks/0/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
-"values": [ ExtResource( 3 ) ]
+"values": [ ExtResource( 4 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Sprite:hframes")
@@ -192,7 +230,7 @@ tracks/1/keys = {
 "times": FloatArray( 0 ),
 "transitions": FloatArray( 1 ),
 "update": 1,
-"values": [ ExtResource( 4 ) ]
+"values": [ ExtResource( 5 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("Sprite:hframes")
@@ -335,7 +373,7 @@ tracks/15/keys = {
 "values": [ Vector2( -3.79587, 19.8552 ), Vector2( -3.79587, 16.0594 ), Vector2( -3.72287, 12.0445 ), Vector2( -3.94183, 8.02969 ), Vector2( -3.72287, 20.0742 ) ]
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=4]
 
 resource/name = "Pop"
 length = 0.6
@@ -362,7 +400,7 @@ tracks/1/keys = {
 "values": [ false, true ]
 }
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=5]
 
 custom_solver_bias = 0.0
 extents = Vector2( 20.1859, 25.6318 )
@@ -382,18 +420,18 @@ script/script = ExtResource( 1 )
 [node name="Mut1" parent="." instance=ExtResource( 2 )]
 
 visibility/visible = false
-transform/pos = Vector2( -43.8752, -23.5885 )
+transform/pos = Vector2( -43.7863, -11.7363 )
 
 [node name="Mut2" parent="." instance=ExtResource( 2 )]
 
 visibility/visible = false
-transform/pos = Vector2( -39.4032, -3.89554 )
+transform/pos = Vector2( -52.1202, 3.99115 )
 transform/rot = 90.0
 
 [node name="Mut4" parent="." instance=ExtResource( 2 )]
 
 visibility/visible = false
-transform/pos = Vector2( -20.3368, 32.1179 )
+transform/pos = Vector2( 7.87677, 43.8879 )
 transform/rot = -90.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -401,6 +439,7 @@ transform/rot = -90.0
 playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
+anims/Idle_before = SubResource( 6 )
 anims/Jump = SubResource( 2 )
 anims/Run1 = SubResource( 3 )
 playback/active = true
@@ -411,20 +450,20 @@ autoplay = ""
 [node name="Mut6" parent="." instance=ExtResource( 2 )]
 
 visibility/visible = false
-transform/pos = Vector2( 23.6758, -24.0268 )
+transform/pos = Vector2( 23.75, -20.0809 )
 transform/rot = -90.0
 
 [node name="Mut7" parent="." instance=ExtResource( 2 )]
 
 visibility/visible = false
-transform/pos = Vector2( 15.7201, -56.0223 )
+transform/pos = Vector2( 16.0049, -48.0435 )
 transform/rot = -90.0
 
 [node name="Mut8" parent="." instance=ExtResource( 2 )]
 
 editor/display_folded = true
 visibility/visible = false
-transform/pos = Vector2( -3.88452, -63.9226 )
+transform/pos = Vector2( -3.979, -55.9872 )
 
 [node name="PopSprite" parent="Mut8"]
 
@@ -436,27 +475,27 @@ modulate = Color( 0.556863, 0.196078, 0.137255, 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
 
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 hframes = 5
-frame = 2
+frame = 4
 
 [node name="Mut3" parent="." instance=ExtResource( 2 )]
 
 visibility/visible = false
-transform/pos = Vector2( -27.9934, 28.0363 )
+transform/pos = Vector2( -7.82758, 35.9543 )
 transform/rot = 90.0
 
 [node name="Mut5" parent="." instance=ExtResource( 2 )]
 
 visibility/visible = false
-transform/pos = Vector2( 28.7151, 24.3188 )
+transform/pos = Vector2( 7.88544, 35.9254 )
 transform/rot = -90.0
 
 [node name="Mut9" parent="." instance=ExtResource( 2 )]
 
 editor/display_folded = true
 visibility/visible = false
-transform/pos = Vector2( 4.01474, -48.012 )
+transform/pos = Vector2( 4.01471, -40.0721 )
 transform/rot = 90.0
 
 [node name="PopSprite" parent="Mut9"]
@@ -471,13 +510,13 @@ modulate = Color( 0.556863, 0.196078, 0.137255, 1 )
 
 editor/display_folded = true
 visibility/visible = false
-transform/pos = Vector2( -3.72287, 12.0445 )
-script/script = ExtResource( 5 )
+transform/pos = Vector2( -3.72287, 20.0742 )
+script/script = ExtResource( 6 )
 
 [node name="Sprite" type="Sprite" parent="Mut10"]
 
 transform/pos = Vector2( 47.9492, -48.0437 )
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 hframes = 4
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Mut10"]
@@ -485,7 +524,7 @@ hframes = 4
 playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
-anims/Pop = SubResource( 5 )
+anims/Pop = SubResource( 4 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]
@@ -508,7 +547,7 @@ anchor_mode = 1
 rotating = false
 current = true
 zoom = Vector2( 1, 1 )
-limit/left = -10000000
+limit/left = 0
 limit/top = 0
 limit/right = 10000000
 limit/bottom = 0
@@ -525,7 +564,7 @@ drag_margin/bottom = 0.0
 
 visibility/visible = false
 input/pickable = true
-shapes/0/shape = SubResource( 4 )
+shapes/0/shape = SubResource( 5 )
 shapes/0/transform = Matrix32( 1, 0, 0, 1, -0.902496, -7.22 )
 shapes/0/trigger = false
 gravity_vec = Vector2( 0, 1 )
@@ -539,7 +578,7 @@ collision/mask = 2
 
 visibility/visible = false
 transform/pos = Vector2( -0.902496, -7.22 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 trigger = false
 _update_shape_index = 0
 

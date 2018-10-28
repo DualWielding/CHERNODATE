@@ -2,6 +2,7 @@ extends KinematicBody2D
 
 var new_member_class = preload("res://NewMember.tscn")
 
+const IDLE_TIME_AT_START = 1 #sec
 const GRAVITY = 2500.0
 const SPEED = 250.0
 const INITIAL_JUMP = 500.0
@@ -20,10 +21,18 @@ var possible_mutations
 var taken_mutations = []
 var mutation_level = 0
 
+var ready = false
+
 func _process(delta):
+	if not ready:
+		return
 	affect_rads(delta)
 
 func _fixed_process(delta):
+	if not ready:
+		return
+		print("lolz")
+
 	if velocity.x < MAX_SPEED:
 		velocity.x += delta * SPEED
 	
@@ -52,6 +61,9 @@ func _fixed_process(delta):
 			jump_numbers = 0
 
 func _input(event):
+	if not ready:
+		return
+	
 	if event.is_action_pressed("jump") and jump_numbers < max_jumps:
 		get_node("AnimationPlayer").play("Jump")
 		velocity.y -= INITIAL_JUMP
@@ -62,10 +74,16 @@ func _input(event):
 		velocity.y += INITIAL_JUMP / 1.5
 
 func _ready():
+	get_node("AnimationPlayer").play("Idle_before")
+	var t = Timer.new()
+	t.set_wait_time(IDLE_TIME_AT_START)
+	add_child(t)
+	t.set_one_shot(true)
+	t.connect("timeout", self, "start")
+	t.start()
 	set_fixed_process(true)
 	set_process(true)
 	set_process_input(true)
-	get_node("AnimationPlayer").play("Run1")
 	possible_mutations = [
 		get_node("Mut1"),
 		get_node("Mut2"),
@@ -78,6 +96,16 @@ func _ready():
 		get_node("Mut9"),
 		get_node("Mut10")
 	]
+
+func start():
+	ready = true
+	get_node("AnimationPlayer").play("Run1")
+
+func stop():
+	ready = false
+	velocity.x = 0
+	get_node("AnimationPlayer").play("Idle_before")
+	get_parent().end(rads)
 
 func get_rads():
 	return rads

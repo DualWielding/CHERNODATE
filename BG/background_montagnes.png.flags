@@ -1,3 +1,2 @@
-filter=false
 repeat=true
-mirroredrepeat=true
+anisotropic=true

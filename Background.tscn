@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=1]
+[gd_scene load_steps=5 format=1]
 
 [ext_resource path="res://BG/background_ciel.png" type="Texture" id=1]
 [ext_resource path="res://BG/background_montagnes.png" type="Texture" id=2]
 [ext_resource path="res://BG/background_arbres.png" type="Texture" id=3]
+[ext_resource path="res://BG/bandedeterre.png" type="Texture" id=4]
 
 [node name="Background" type="ParallaxBackground"]
 
@@ -19,6 +20,7 @@ scroll/ignore_camera_zoom = true
 
 [node name="Sky" type="ParallaxLayer" parent="."]
 
+editor/display_folded = true
 motion/scale = Vector2( 0.2, 1 )
 motion/offset = Vector2( 0, 0 )
 motion/mirroring = Vector2( 0, 0 )
@@ -41,7 +43,7 @@ motion/mirroring = Vector2( 0, 0 )
 texture = ExtResource( 2 )
 centered = false
 region = true
-region_rect = Rect2( 0, 0, 32768, 720 )
+region_rect = Rect2( 0, 0, 65536, 720 )
 
 [node name="Trees" type="ParallaxLayer" parent="."]
 
@@ -55,5 +57,19 @@ texture = ExtResource( 3 )
 centered = false
 region = true
 region_rect = Rect2( 0, 0, 32768, 720 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+
+motion/scale = Vector2( 1, 1 )
+motion/offset = Vector2( 0, 0 )
+motion/mirroring = Vector2( 0, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxLayer"]
+
+texture = ExtResource( 4 )
+centered = false
+offset = Vector2( 0, 64 )
+region = true
+region_rect = Rect2( 0, 0, 65536, 720 )
 
 
