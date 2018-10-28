@@ -1,6 +1,9 @@
-[gd_scene load_steps=3 format=1]
+[gd_scene load_steps=6 format=1]
 
 [ext_resource path="res://UI.gd" type="Script" id=1]
+[ext_resource path="res://NouvellesImages/jauge.png" type="Texture" id=2]
+[ext_resource path="res://NouvellesImages/aiguille.png" type="Texture" id=3]
+[ext_resource path="res://GeigerHand.gd" type="Script" id=4]
 
 [sub_resource type="StyleBoxFlat" id=1]
 
@@ -37,7 +40,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Radsbar" type="ProgressBar" parent="."]
+[node name="OldRadsBar" type="ProgressBar" parent="."]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -56,5 +59,26 @@ range/value = 1.0
 range/exp_edit = false
 range/rounded = false
 percent/visible = true
+
+[node name="TextureFrame" type="TextureFrame" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 396.0
+margin/top = 619.0
+margin/right = 908.0
+margin/bottom = 747.0
+texture = ExtResource( 2 )
+stretch_mode = 0
+
+[node name="Radsbar" type="Sprite" parent="."]
+
+transform/pos = Vector2( 652.862, 721.163 )
+transform/rot = 45.0
+texture = ExtResource( 3 )
+offset = Vector2( 2.44305, -63.8151 )
+script/script = ExtResource( 4 )
 
 
