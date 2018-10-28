@@ -6,7 +6,7 @@
 [node name="Object" instance=ExtResource( 1 )]
 
 texture = ExtResource( 2 )
-speed_affection = -50.0
+speed_affection = -100.0
 rads_affection = 5.0
 is_destructible = false
 
