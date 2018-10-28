@@ -1,15 +1,16 @@
-[gd_scene load_steps=11 format=1]
+[gd_scene load_steps=12 format=1]
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
 [ext_resource path="res://Background.tscn" type="PackedScene" id=2]
 [ext_resource path="res://TileMap.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Character.tscn" type="PackedScene" id=4]
 [ext_resource path="res://UI.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Objects/Crate.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Objects/BioCrate.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Objects/BioGoo.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Objects/RadPillz.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Objects/Vodka.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Ending/End.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Objects/Crate.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Objects/BioCrate.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Objects/BioGoo.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Objects/RadPillz.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Objects/Vodka.tscn" type="PackedScene" id=11]
 
 [node name="RunnerLikeLevel" type="Node"]
 
@@ -29,895 +30,904 @@ transform/scale = Vector2( 0.75, 0.75 )
 
 [node name="UI" parent="." instance=ExtResource( 5 )]
 
+[node name="End" parent="UI" instance=ExtResource( 6 )]
+
 [node name="Items" type="Node" parent="."]
 
 [node name="Crates" type="Node" parent="Items"]
 
-[node name="Crate4" parent="Items/Crates" instance=ExtResource( 6 )]
+editor/display_folded = true
+
+[node name="Crate4" parent="Items/Crates" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 3983.49, 618.084 )
 
-[node name="Crate5" parent="Items/Crates" instance=ExtResource( 6 )]
+[node name="Crate5" parent="Items/Crates" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 4107.53, 616.813 )
 
-[node name="Crate6" parent="Items/Crates" instance=ExtResource( 6 )]
+[node name="Crate6" parent="Items/Crates" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 4048.97, 626.214 )
 
-[node name="Crate" parent="Items/Crates" instance=ExtResource( 6 )]
+[node name="Crate" parent="Items/Crates" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 1528.53, 614.013 )
 
-[node name="Crate2" parent="Items/Crates" instance=ExtResource( 6 )]
+[node name="Crate2" parent="Items/Crates" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 7812.68, 616.963 )
 
-[node name="Crate7" parent="Items/Crates" instance=ExtResource( 6 )]
+[node name="Crate7" parent="Items/Crates" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 8102.1, 613.274 )
 
-[node name="Crate3" parent="Items/Crates" instance=ExtResource( 6 )]
+[node name="Crate3" parent="Items/Crates" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 7619.45, 616.605 )
 
-[node name="Crate8" parent="Items/Crates" instance=ExtResource( 6 )]
+[node name="Crate8" parent="Items/Crates" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 12678.1, 616.129 )
 
-[node name="Crate9" parent="Items/Crates" instance=ExtResource( 6 )]
+[node name="Crate9" parent="Items/Crates" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 20297.6, 620.188 )
 
-[node name="Crate10" parent="Items/Crates" instance=ExtResource( 6 )]
+[node name="Crate10" parent="Items/Crates" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 20344.4, 635.22 )
 
-[node name="Crate11" parent="Items/Crates" instance=ExtResource( 6 )]
+[node name="Crate11" parent="Items/Crates" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 22232.9, 613.583 )
 
-[node name="Crate15" parent="Items/Crates" instance=ExtResource( 6 )]
+[node name="Crate15" parent="Items/Crates" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 22815.8, 611.913 )
 
-[node name="Crate16" parent="Items/Crates" instance=ExtResource( 6 )]
+[node name="Crate16" parent="Items/Crates" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 22931, 625.274 )
 
-[node name="Crate17" parent="Items/Crates" instance=ExtResource( 6 )]
+[node name="Crate17" parent="Items/Crates" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 22863, 618.47 )
 
-[node name="Crate18" parent="Items/Crates" instance=ExtResource( 6 )]
+[node name="Crate18" parent="Items/Crates" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 22902.1, 574.487 )
 
-[node name="Crate12" parent="Items/Crates" instance=ExtResource( 6 )]
+[node name="Crate12" parent="Items/Crates" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 24536.8, 611.311 )
 
-[node name="Crate14" parent="Items/Crates" instance=ExtResource( 6 )]
+[node name="Crate14" parent="Items/Crates" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 25472.9, 620.4 )
 
-[node name="Crate19" parent="Items/Crates" instance=ExtResource( 6 )]
+[node name="Crate19" parent="Items/Crates" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 30360.3, 622.072 )
 
-[node name="Crate20" parent="Items/Crates" instance=ExtResource( 6 )]
+[node name="Crate20" parent="Items/Crates" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 30488.5, 619.057 )
 
-[node name="Crate21" parent="Items/Crates" instance=ExtResource( 6 )]
+[node name="Crate21" parent="Items/Crates" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 34946, 353.682 )
 
-[node name="Crate36" parent="Items/Crates" instance=ExtResource( 6 )]
+[node name="Crate36" parent="Items/Crates" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 35525, 144.725 )
 
-[node name="Crate25" parent="Items/Crates" instance=ExtResource( 6 )]
+[node name="Crate25" parent="Items/Crates" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 37472.1, 548.769 )
 
-[node name="Crate26" parent="Items/Crates" instance=ExtResource( 6 )]
+[node name="Crate26" parent="Items/Crates" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 38113.4, 428.71 )
 
-[node name="Crate28" parent="Items/Crates" instance=ExtResource( 6 )]
+[node name="Crate28" parent="Items/Crates" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 38180, 428.238 )
 
-[node name="Crate33" parent="Items/Crates" instance=ExtResource( 6 )]
+[node name="Crate33" parent="Items/Crates" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 39105.7, 441.783 )
 
-[node name="Crate34" parent="Items/Crates" instance=ExtResource( 6 )]
+[node name="Crate34" parent="Items/Crates" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 39038.4, 441.338 )
 
-[node name="Crate35" parent="Items/Crates" instance=ExtResource( 6 )]
+[node name="Crate35" parent="Items/Crates" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 38971.5, 442.199 )
 
-[node name="Crate27" parent="Items/Crates" instance=ExtResource( 6 )]
+[node name="Crate27" parent="Items/Crates" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 38431.5, 550.969 )
 
-[node name="Crate29" parent="Items/Crates" instance=ExtResource( 6 )]
+[node name="Crate29" parent="Items/Crates" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 36576.6, 425.688 )
 
-[node name="Crate31" parent="Items/Crates" instance=ExtResource( 6 )]
+[node name="Crate31" parent="Items/Crates" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 36119.5, 450.419 )
 
-[node name="Crate32" parent="Items/Crates" instance=ExtResource( 6 )]
+[node name="Crate32" parent="Items/Crates" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 35795, 554.372 )
 
-[node name="Crate30" parent="Items/Crates" instance=ExtResource( 6 )]
+[node name="Crate30" parent="Items/Crates" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 37030, 477.611 )
 
-[node name="Crate22" parent="Items/Crates" instance=ExtResource( 6 )]
+[node name="Crate22" parent="Items/Crates" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 33520.1, 619.454 )
 
-[node name="Crate23" parent="Items/Crates" instance=ExtResource( 6 )]
+[node name="Crate23" parent="Items/Crates" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 34496.7, 460.384 )
 
-[node name="Crate24" parent="Items/Crates" instance=ExtResource( 6 )]
+[node name="Crate24" parent="Items/Crates" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 34593.7, 459.94 )
 
 [node name="BigCrates" type="Node" parent="Items"]
 
-[node name="Crate1" parent="Items/BigCrates" instance=ExtResource( 6 )]
+editor/display_folded = true
+
+[node name="Crate1" parent="Items/BigCrates" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 2532.99, 600.23 )
 transform/scale = Vector2( 1, 1.89733 )
 
-[node name="Crate2" parent="Items/BigCrates" instance=ExtResource( 6 )]
+[node name="Crate2" parent="Items/BigCrates" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 29408.4, 591.09 )
 transform/scale = Vector2( 1, 1.89733 )
 
-[node name="Crate13" parent="Items/BigCrates" instance=ExtResource( 6 )]
+[node name="Crate13" parent="Items/BigCrates" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 28650.6, 588.056 )
 transform/scale = Vector2( 1, 1.89733 )
 
-[node name="Crate14" parent="Items/BigCrates" instance=ExtResource( 6 )]
+[node name="Crate14" parent="Items/BigCrates" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 28161.2, 587.542 )
 transform/scale = Vector2( 1, 1.89733 )
 
-[node name="Crate3" parent="Items/BigCrates" instance=ExtResource( 6 )]
+[node name="Crate3" parent="Items/BigCrates" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 7694.95, 585.265 )
 transform/scale = Vector2( 1, 2.18158 )
 
-[node name="Crate4" parent="Items/BigCrates" instance=ExtResource( 6 )]
+[node name="Crate4" parent="Items/BigCrates" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 7754.06, 591.823 )
 transform/scale = Vector2( 1, 1.93165 )
 
-[node name="Crate5" parent="Items/BigCrates" instance=ExtResource( 6 )]
+[node name="Crate5" parent="Items/BigCrates" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 7662.42, 600.35 )
 transform/scale = Vector2( 1, 1.64844 )
 
-[node name="Crate6" parent="Items/BigCrates" instance=ExtResource( 6 )]
+[node name="Crate6" parent="Items/BigCrates" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 12539.6, 589.903 )
 transform/scale = Vector2( 1, 1.64844 )
 
-[node name="Crate7" parent="Items/BigCrates" instance=ExtResource( 6 )]
+[node name="Crate7" parent="Items/BigCrates" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 18017, 603.75 )
 transform/scale = Vector2( 1, 1.64844 )
 
-[node name="Crate8" parent="Items/BigCrates" instance=ExtResource( 6 )]
+[node name="Crate8" parent="Items/BigCrates" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 23721.9, 594.477 )
 transform/scale = Vector2( 1, 1.64844 )
 
-[node name="Crate9" parent="Items/BigCrates" instance=ExtResource( 6 )]
+[node name="Crate9" parent="Items/BigCrates" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 31989.3, 256.465 )
 transform/scale = Vector2( 1, 1.64844 )
 
-[node name="Crate10" parent="Items/BigCrates" instance=ExtResource( 6 )]
+[node name="Crate10" parent="Items/BigCrates" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 32357.4, 596.18 )
 transform/scale = Vector2( 1, 1.64844 )
 
-[node name="Crate17" parent="Items/BigCrates" instance=ExtResource( 6 )]
+[node name="Crate17" parent="Items/BigCrates" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 32974.7, 597.015 )
 transform/scale = Vector2( 1, 1.64844 )
 
-[node name="Crate11" parent="Items/BigCrates" instance=ExtResource( 6 )]
+[node name="Crate11" parent="Items/BigCrates" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 30421.9, 601.032 )
 transform/scale = Vector2( 1, 1.64844 )
 
-[node name="Crate15" parent="Items/BigCrates" instance=ExtResource( 6 )]
+[node name="Crate15" parent="Items/BigCrates" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 34210, 580.22 )
 transform/scale = Vector2( 1, 2.20181 )
 
-[node name="Crate16" parent="Items/BigCrates" instance=ExtResource( 6 )]
+[node name="Crate16" parent="Items/BigCrates" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 34589.3, 582.704 )
 transform/scale = Vector2( 1, 2.25798 )
 
-[node name="Crate18" parent="Items/BigCrates" instance=ExtResource( 6 )]
+[node name="Crate18" parent="Items/BigCrates" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 34547.5, 441.01 )
 transform/scale = Vector2( 1, 1.91381 )
 
-[node name="Crate12" parent="Items/BigCrates" instance=ExtResource( 6 )]
+[node name="Crate12" parent="Items/BigCrates" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 30539.9, 611.323 )
 transform/scale = Vector2( 1, 1.64844 )
 
-[node name="Crate19" parent="Items/BigCrates" instance=ExtResource( 6 )]
+[node name="Crate19" parent="Items/BigCrates" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 42651.2, 539.586 )
 transform/scale = Vector2( 1, 1.64844 )
 
 [node name="BioCrates" type="Node" parent="Items"]
 
-[node name="Object" parent="Items/BioCrates" instance=ExtResource( 7 )]
+editor/display_folded = true
+
+[node name="Object" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 4951.57, 622.362 )
 
-[node name="Object1" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object1" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 7647.55, 618.016 )
 
-[node name="Object2" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object2" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 11915.6, 614.751 )
 
-[node name="Object3" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object3" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 15862.5, 611.66 )
 
-[node name="Object4" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object4" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 16550.9, 617.832 )
 
-[node name="Object5" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object5" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 17302.9, 614.751 )
 
-[node name="Object7" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object7" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 16596.9, 618.464 )
 
-[node name="Object8" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object8" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 16574, 582.809 )
 
-[node name="Object6" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object6" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 18084.1, 618.852 )
 
-[node name="Object9" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object9" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 28957.1, 615.053 )
 
-[node name="Object10" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object10" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 28583.4, 609.067 )
 
-[node name="Object31" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object31" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 27680.9, 614.227 )
 
-[node name="Object11" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object11" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 32558.2, 264.915 )
 
-[node name="Object12" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object12" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 32958.2, 275.798 )
 
-[node name="Object13" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object13" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 32960.9, 226.825 )
 
-[node name="Object16" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object16" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 33385.4, 266.035 )
 
-[node name="Object22 6" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object22 6" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 39299.5, 628.065 )
 
-[node name="Object227" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object227" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 40139.9, 623.03 )
 
-[node name="Object2327" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object2327" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 43901.7, 620.425 )
 
-[node name="Object228 3" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object228 3" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 40323.8, 623.03 )
 
-[node name="Object2284" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object2284" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 43656.1, 618.918 )
 
-[node name="Object2287" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object2287" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 44085.6, 620.425 )
 
-[node name="Object17" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object17" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 33448.4, 265.035 )
 
-[node name="Object22" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object22" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 39362.5, 627.065 )
 
-[node name="Object23" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object23" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 40202.9, 622.03 )
 
-[node name="Object25" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object25" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 43535.1, 617.918 )
 
-[node name="Object26" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object26" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 43964.7, 619.425 )
 
-[node name="Object24" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object24" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 40386.8, 622.03 )
 
-[node name="Object25 2" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object25 2" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 43719.1, 617.918 )
 
-[node name="Object253" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object253" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 44148.6, 619.425 )
 
-[node name="Object18" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object18" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 33509.4, 265.035 )
 
-[node name="Object22 3" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object22 3" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 39423.5, 627.065 )
 
-[node name="Object224" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object224" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 40263.9, 622.03 )
 
-[node name="Object232 9" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object232 9" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 43596.1, 617.918 )
 
-[node name="Object23210" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object23210" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 44025.7, 619.425 )
 
-[node name="Object228 5" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object228 5" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 40447.8, 622.03 )
 
-[node name="Object2286" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object2286" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 43780.1, 617.918 )
 
-[node name="Object2287 2" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object2287 2" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 44209.6, 619.425 )
 
-[node name="Object19" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object19" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 33427.4, 215.035 )
 
-[node name="Object22 5" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object22 5" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 39341.5, 577.065 )
 
-[node name="Object226" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object226" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 40181.9, 572.03 )
 
-[node name="Object2324" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object2324" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 43943.7, 569.425 )
 
-[node name="Object228" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object228" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 40365.8, 572.03 )
 
-[node name="Object232 4" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object232 4" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 43698.1, 567.918 )
 
-[node name="Object2325" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object2325" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 44127.6, 569.425 )
 
-[node name="Object20" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object20" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 33489.4, 214.035 )
 
-[node name="Object22 4" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object22 4" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 39403.5, 576.065 )
 
-[node name="Object225" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object225" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 40243.9, 571.03 )
 
-[node name="Object232 7" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object232 7" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 43576.1, 566.918 )
 
-[node name="Object2328" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object2328" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 44005.7, 568.425 )
 
-[node name="Object228 4" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object228 4" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 40427.8, 571.03 )
 
-[node name="Object2285" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object2285" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 43760.1, 566.918 )
 
-[node name="Object2287 3" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object2287 3" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 44189.6, 568.425 )
 
-[node name="Object21" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object21" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 33459.4, 165.035 )
 
-[node name="Object27" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object27" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 35216.8, 484.596 )
 
-[node name="Object28" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object28" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 34948.9, 615.832 )
 
-[node name="Object29" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object29" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 35407.4, 626.662 )
 
-[node name="Object30" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object30" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 35407.4, 578.829 )
 
-[node name="Object22 2" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object22 2" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 39373.5, 527.065 )
 
-[node name="Object2210" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object2210" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 37828.9, 554.197 )
 
-[node name="Object223" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object223" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 40507, 624.079 )
 
-[node name="Object232 5" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object232 5" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 43839.3, 619.967 )
 
-[node name="Object229" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object229" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 40492.5, 572.745 )
 
-[node name="Object232 2" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object232 2" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 43824.7, 568.633 )
 
-[node name="Object230" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object230" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 40274.1, 534.84 )
 
-[node name="Object232" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object232" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 43606.3, 530.728 )
 
-[node name="Object233" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object233" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 43886, 567.32 )
 
-[node name="Object234" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object234" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 43804, 508.32 )
 
-[node name="Object235" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object235" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 43921, 510.32 )
 
-[node name="Object236" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object236" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 43864, 509.32 )
 
-[node name="Object231" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object231" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 40395, 535.742 )
 
-[node name="Object232 8" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object232 8" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 43727.2, 531.63 )
 
-[node name="Object2329" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object2329" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 44156.8, 533.138 )
 
-[node name="Object228 2" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object228 2" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 40304.5, 567.456 )
 
-[node name="Object2283" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object2283" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 43636.7, 563.344 )
 
-[node name="Object2287 4" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object2287 4" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 44066.3, 564.851 )
 
-[node name="Object14" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object14" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 32287.9, 615.203 )
 
-[node name="Object15" parent="Items/BioCrates" instance=ExtResource( 7 )]
+[node name="Object15" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 32292.4, 570.882 )
 
 [node name="BioGoo" type="Node" parent="Items"]
 
-[node name="Object" parent="Items/BioGoo" instance=ExtResource( 8 )]
+editor/display_folded = true
+
+[node name="Object" parent="Items/BioGoo" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 5298.08, 640.07 )
 
-[node name="Object2" parent="Items/BioGoo" instance=ExtResource( 8 )]
+[node name="Object2" parent="Items/BioGoo" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 5426.94, 640.061 )
 
-[node name="Object3" parent="Items/BioGoo" instance=ExtResource( 8 )]
+[node name="Object3" parent="Items/BioGoo" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 5556.23, 639.51 )
 
-[node name="Object4" parent="Items/BioGoo" instance=ExtResource( 8 )]
+[node name="Object4" parent="Items/BioGoo" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 5685.23, 638.83 )
 
-[node name="Object5" parent="Items/BioGoo" instance=ExtResource( 8 )]
+[node name="Object5" parent="Items/BioGoo" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 5814.58, 637.91 )
 
-[node name="Object6" parent="Items/BioGoo" instance=ExtResource( 8 )]
+[node name="Object6" parent="Items/BioGoo" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 5942.41, 638.765 )
 
-[node name="Object8" parent="Items/BioGoo" instance=ExtResource( 8 )]
+[node name="Object8" parent="Items/BioGoo" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 6069.84, 637.657 )
 
-[node name="Object1" parent="Items/BioGoo" instance=ExtResource( 8 )]
+[node name="Object1" parent="Items/BioGoo" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 5169.06, 640.906 )
 
-[node name="Object7" parent="Items/BioGoo" instance=ExtResource( 8 )]
+[node name="Object7" parent="Items/BioGoo" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 5040.37, 640.906 )
 
-[node name="Object9" parent="Items/BioGoo" instance=ExtResource( 8 )]
+[node name="Object9" parent="Items/BioGoo" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 11269.9, 643.675 )
 
-[node name="Object39" parent="Items/BioGoo" instance=ExtResource( 8 )]
+[node name="Object39" parent="Items/BioGoo" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 9291.85, 648.335 )
 
-[node name="Object40" parent="Items/BioGoo" instance=ExtResource( 8 )]
+[node name="Object40" parent="Items/BioGoo" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 9420.61, 648.535 )
 
-[node name="Object10" parent="Items/BioGoo" instance=ExtResource( 8 )]
+[node name="Object10" parent="Items/BioGoo" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 14081.1, 639.777 )
 
-[node name="Object11" parent="Items/BioGoo" instance=ExtResource( 8 )]
+[node name="Object11" parent="Items/BioGoo" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 20696.1, 644.805 )
 
-[node name="Object12" parent="Items/BioGoo" instance=ExtResource( 8 )]
+[node name="Object12" parent="Items/BioGoo" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 26628.1, 587.269 )
 
-[node name="Object13" parent="Items/BioGoo" instance=ExtResource( 8 )]
+[node name="Object13" parent="Items/BioGoo" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 26758.5, 587.95 )
 
-[node name="Object51" parent="Items/BioGoo" instance=ExtResource( 8 )]
+[node name="Object51" parent="Items/BioGoo" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 27579.1, 587.503 )
 
-[node name="Object53" parent="Items/BioGoo" instance=ExtResource( 8 )]
+[node name="Object53" parent="Items/BioGoo" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 27756.3, 650.84 )
 transform/scale = Vector2( 1.64458, 1 )
 
-[node name="Object52" parent="Items/BioGoo" instance=ExtResource( 8 )]
+[node name="Object52" parent="Items/BioGoo" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 27461.7, 588.313 )
 
-[node name="Object14" parent="Items/BioGoo" instance=ExtResource( 8 )]
+[node name="Object14" parent="Items/BioGoo" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 23289.4, 644.018 )
 
-[node name="Object15" parent="Items/BioGoo" instance=ExtResource( 8 )]
+[node name="Object15" parent="Items/BioGoo" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 23416.4, 644.018 )
 
-[node name="Object17" parent="Items/BioGoo" instance=ExtResource( 8 )]
+[node name="Object17" parent="Items/BioGoo" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 28770.7, 648.455 )
 
-[node name="Object18" parent="Items/BioGoo" instance=ExtResource( 8 )]
+[node name="Object18" parent="Items/BioGoo" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 28892.8, 648.455 )
 
-[node name="Object19" parent="Items/BioGoo" instance=ExtResource( 8 )]
+[node name="Object19" parent="Items/BioGoo" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 29312.6, 649.358 )
 
-[node name="Object20" parent="Items/BioGoo" instance=ExtResource( 8 )]
+[node name="Object20" parent="Items/BioGoo" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 30064, 422.58 )
 
-[node name="Object21" parent="Items/BioGoo" instance=ExtResource( 8 )]
+[node name="Object21" parent="Items/BioGoo" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 31896.5, 295.658 )
 
-[node name="Object22" parent="Items/BioGoo" instance=ExtResource( 8 )]
+[node name="Object22" parent="Items/BioGoo" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 32480.6, 295.774 )
 
-[node name="Object23" parent="Items/BioGoo" instance=ExtResource( 8 )]
+[node name="Object23" parent="Items/BioGoo" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 32602.2, 295.774 )
 
-[node name="Object24" parent="Items/BioGoo" instance=ExtResource( 8 )]
+[node name="Object24" parent="Items/BioGoo" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 32731.2, 295.774 )
 
-[node name="Object25" parent="Items/BioGoo" instance=ExtResource( 8 )]
+[node name="Object25" parent="Items/BioGoo" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 32860.3, 296.676 )
 
-[node name="Object41" parent="Items/BioGoo" instance=ExtResource( 8 )]
+[node name="Object41" parent="Items/BioGoo" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 33694.9, 648.646 )
 
-[node name="Object42" parent="Items/BioGoo" instance=ExtResource( 8 )]
+[node name="Object42" parent="Items/BioGoo" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 35047.1, 522.691 )
 
-[node name="Object43" parent="Items/BioGoo" instance=ExtResource( 8 )]
+[node name="Object43" parent="Items/BioGoo" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 35360.4, 522.292 )
 
-[node name="Object44" parent="Items/BioGoo" instance=ExtResource( 8 )]
+[node name="Object44" parent="Items/BioGoo" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 35191.3, 650.127 )
 
-[node name="Object45" parent="Items/BioGoo" instance=ExtResource( 8 )]
+[node name="Object45" parent="Items/BioGoo" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 36011.8, 589.156 )
 
-[node name="Object46" parent="Items/BioGoo" instance=ExtResource( 8 )]
+[node name="Object46" parent="Items/BioGoo" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 36303.5, 587.929 )
 
-[node name="Object47" parent="Items/BioGoo" instance=ExtResource( 8 )]
+[node name="Object47" parent="Items/BioGoo" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 36432, 588.136 )
 
-[node name="Object50" parent="Items/BioGoo" instance=ExtResource( 8 )]
+[node name="Object50" parent="Items/BioGoo" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 37982, 588.136 )
 
-[node name="Object48" parent="Items/BioGoo" instance=ExtResource( 8 )]
+[node name="Object48" parent="Items/BioGoo" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 36831.8, 587.558 )
 transform/scale = Vector2( 1.36589, 1 )
 
-[node name="Object49" parent="Items/BioGoo" instance=ExtResource( 8 )]
+[node name="Object49" parent="Items/BioGoo" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 37409.7, 587.758 )
 transform/scale = Vector2( 1.36589, 1 )
 
-[node name="Object26" parent="Items/BioGoo" instance=ExtResource( 8 )]
+[node name="Object26" parent="Items/BioGoo" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 32083.7, 296.613 )
 
-[node name="Object27" parent="Items/BioGoo" instance=ExtResource( 8 )]
+[node name="Object27" parent="Items/BioGoo" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 31264.3, 519.513 )
 
-[node name="Object28" parent="Items/BioGoo" instance=ExtResource( 8 )]
+[node name="Object28" parent="Items/BioGoo" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 31511.1, 650.882 )
 
-[node name="Object29" parent="Items/BioGoo" instance=ExtResource( 8 )]
+[node name="Object29" parent="Items/BioGoo" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 30133.4, 647.713 )
 
-[node name="Object34" parent="Items/BioGoo" instance=ExtResource( 8 )]
+[node name="Object34" parent="Items/BioGoo" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 29634.8, 648.38 )
 
-[node name="Object30" parent="Items/BioGoo" instance=ExtResource( 8 )]
+[node name="Object30" parent="Items/BioGoo" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 30261, 647.856 )
 
-[node name="Object31" parent="Items/BioGoo" instance=ExtResource( 8 )]
+[node name="Object31" parent="Items/BioGoo" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 30514.9, 651.151 )
 
-[node name="Object32" parent="Items/BioGoo" instance=ExtResource( 8 )]
+[node name="Object32" parent="Items/BioGoo" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 30781, 649.294 )
 
-[node name="Object33" parent="Items/BioGoo" instance=ExtResource( 8 )]
+[node name="Object33" parent="Items/BioGoo" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 30911.3, 648.171 )
 
-[node name="Object35" parent="Items/BioGoo" instance=ExtResource( 8 )]
+[node name="Object35" parent="Items/BioGoo" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 40810.2, 597.493 )
 
-[node name="Object36" parent="Items/BioGoo" instance=ExtResource( 8 )]
+[node name="Object36" parent="Items/BioGoo" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 41231.3, 598.308 )
 
-[node name="Object37" parent="Items/BioGoo" instance=ExtResource( 8 )]
+[node name="Object37" parent="Items/BioGoo" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 42374.2, 597.95 )
 
-[node name="Object38" parent="Items/BioGoo" instance=ExtResource( 8 )]
+[node name="Object38" parent="Items/BioGoo" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 42503.8, 598.049 )
 
-[node name="Object16" parent="Items/BioGoo" instance=ExtResource( 8 )]
+[node name="Object16" parent="Items/BioGoo" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 23920.8, 649.759 )
 
 [node name="PowerUp" type="Node" parent="Items"]
 
-[node name="Object" parent="Items/PowerUp" instance=ExtResource( 9 )]
+[node name="Object" parent="Items/PowerUp" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 6340.15, 587.674 )
 
-[node name="Object1" parent="Items/PowerUp" instance=ExtResource( 9 )]
+[node name="Object1" parent="Items/PowerUp" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 12670.1, 112.413 )
 
-[node name="Object2" parent="Items/PowerUp" instance=ExtResource( 9 )]
+[node name="Object2" parent="Items/PowerUp" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 21188.5, 593.112 )
 
-[node name="Object23" parent="Items/PowerUp" instance=ExtResource( 9 )]
+[node name="Object23" parent="Items/PowerUp" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 23845.8, 585.417 )
 
-[node name="Object12" parent="Items/PowerUp" instance=ExtResource( 9 )]
+[node name="Object12" parent="Items/PowerUp" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 16571.6, 495.195 )
 
-[node name="Object9" parent="Items/PowerUp" instance=ExtResource( 9 )]
+[node name="Object9" parent="Items/PowerUp" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 30611.4, 301.904 )
 
-[node name="Object13" parent="Items/PowerUp" instance=ExtResource( 9 )]
+[node name="Object13" parent="Items/PowerUp" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 34404.1, 590.076 )
 
-[node name="Object24" parent="Items/PowerUp" instance=ExtResource( 9 )]
+[node name="Object24" parent="Items/PowerUp" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 36820.9, 411.89 )
 
-[node name="Object16" parent="Items/PowerUp" instance=ExtResource( 9 )]
+[node name="Object16" parent="Items/PowerUp" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 41795, 374.102 )
 
-[node name="Object 2" parent="Items/PowerUp" instance=ExtResource( 10 )]
+[node name="Object 2" parent="Items/PowerUp" instance=ExtResource( 11 )]
 
 transform/pos = Vector2( 8364.31, 594.358 )
 
-[node name="Object4" parent="Items/PowerUp" instance=ExtResource( 10 )]
+[node name="Object4" parent="Items/PowerUp" instance=ExtResource( 11 )]
 
 transform/pos = Vector2( 14204.3, 575.625 )
 
-[node name="Object7" parent="Items/PowerUp" instance=ExtResource( 10 )]
+[node name="Object7" parent="Items/PowerUp" instance=ExtResource( 11 )]
 
 transform/pos = Vector2( 11561, 593.626 )
 
-[node name="Object19" parent="Items/PowerUp" instance=ExtResource( 10 )]
+[node name="Object19" parent="Items/PowerUp" instance=ExtResource( 11 )]
 
 transform/pos = Vector2( 11066.9, 400.077 )
 
-[node name="Object3" parent="Items/PowerUp" instance=ExtResource( 10 )]
+[node name="Object3" parent="Items/PowerUp" instance=ExtResource( 11 )]
 
 transform/pos = Vector2( 8582.59, 592.142 )
 
-[node name="Object8" parent="Items/PowerUp" instance=ExtResource( 10 )]
+[node name="Object8" parent="Items/PowerUp" instance=ExtResource( 11 )]
 
 transform/pos = Vector2( 26256.4, 477.581 )
 
-[node name="Object5" parent="Items/PowerUp" instance=ExtResource( 10 )]
+[node name="Object5" parent="Items/PowerUp" instance=ExtResource( 11 )]
 
 transform/pos = Vector2( 21190.9, 449.358 )
 
-[node name="Object6" parent="Items/PowerUp" instance=ExtResource( 10 )]
+[node name="Object6" parent="Items/PowerUp" instance=ExtResource( 11 )]
 
 transform/pos = Vector2( 24978, 489.982 )
 
-[node name="Object10" parent="Items/PowerUp" instance=ExtResource( 10 )]
+[node name="Object10" parent="Items/PowerUp" instance=ExtResource( 11 )]
 
 transform/pos = Vector2( 30040.5, 361.882 )
 
-[node name="Object11" parent="Items/PowerUp" instance=ExtResource( 10 )]
+[node name="Object11" parent="Items/PowerUp" instance=ExtResource( 11 )]
 
 transform/pos = Vector2( 31181.2, 293.386 )
 
-[node name="Object20" parent="Items/PowerUp" instance=ExtResource( 10 )]
+[node name="Object20" parent="Items/PowerUp" instance=ExtResource( 11 )]
 
 transform/pos = Vector2( 32623.6, 569.639 )
 
-[node name="Object21" parent="Items/PowerUp" instance=ExtResource( 10 )]
+[node name="Object21" parent="Items/PowerUp" instance=ExtResource( 11 )]
 
 transform/pos = Vector2( 35014.6, 242.059 )
 
-[node name="Object25" parent="Items/PowerUp" instance=ExtResource( 10 )]
+[node name="Object25" parent="Items/PowerUp" instance=ExtResource( 11 )]
 
 transform/pos = Vector2( 38685.8, 506.55 )
 
-[node name="Object27" parent="Items/PowerUp" instance=ExtResource( 10 )]
+[node name="Object27" parent="Items/PowerUp" instance=ExtResource( 11 )]
 
 transform/pos = Vector2( 38179, 341.863 )
 
-[node name="Object26" parent="Items/PowerUp" instance=ExtResource( 10 )]
+[node name="Object26" parent="Items/PowerUp" instance=ExtResource( 11 )]
 
 transform/pos = Vector2( 35931.5, 445.044 )
 
-[node name="Object22" parent="Items/PowerUp" instance=ExtResource( 10 )]
+[node name="Object22" parent="Items/PowerUp" instance=ExtResource( 11 )]
 
 transform/pos = Vector2( 27658.4, 341.817 )
 
-[node name="Object18" parent="Items/PowerUp" instance=ExtResource( 10 )]
+[node name="Object18" parent="Items/PowerUp" instance=ExtResource( 11 )]
 
 transform/pos = Vector2( 32711.4, 201.557 )
 
-[node name="Object14" parent="Items/PowerUp" instance=ExtResource( 10 )]
+[node name="Object14" parent="Items/PowerUp" instance=ExtResource( 11 )]
 
 transform/pos = Vector2( 39684.2, 528.097 )
 
-[node name="Object17" parent="Items/PowerUp" instance=ExtResource( 10 )]
+[node name="Object17" parent="Items/PowerUp" instance=ExtResource( 11 )]
 
 transform/pos = Vector2( 41791.5, 511.292 )
-
 
 
