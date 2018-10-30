@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=1]
 
 [ext_resource path="res://Ending/End.gd" type="Script" id=1]
-[ext_resource path="res://Dialogs/texte_bonnefin.png" type="Texture" id=2]
+[ext_resource path="res://Ending/texte_bonnefin2.png" type="Texture" id=2]
 [ext_resource path="res://Dialogs/texte_moyennefin.png" type="Texture" id=3]
 [ext_resource path="res://Dialogs/texte_mauvaisefin.png" type="Texture" id=4]
 
