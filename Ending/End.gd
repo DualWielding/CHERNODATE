@@ -23,4 +23,4 @@ func pop_button():
 	get_node("Button").show()
 
 func _on_Button_pressed():
-	get_tree().quit()
+	get_tree().change_scene("res://RunnerLikeLevel.tscn")

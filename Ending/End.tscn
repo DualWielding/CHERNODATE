@@ -87,7 +87,7 @@ margin/bottom = 257.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-text = "The End"
+text = "Retry"
 flat = false
 
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
