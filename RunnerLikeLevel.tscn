@@ -33,8 +33,6 @@ transform/scale = Vector2( 0.75, 0.75 )
 
 [node name="UI" parent="." instance=ExtResource( 5 )]
 
-editor/display_folded = true
-
 [node name="End" parent="UI" instance=ExtResource( 6 )]
 
 [node name="Items" type="Node" parent="."]
@@ -278,6 +276,8 @@ transform/pos = Vector2( 42651.2, 539.586 )
 transform/scale = Vector2( 1, 1.64844 )
 
 [node name="BioCrates" type="Node" parent="Items"]
+
+editor/display_folded = true
 
 [node name="Object" parent="Items/BioCrates" instance=ExtResource( 8 )]
 
@@ -602,6 +602,8 @@ transform/pos = Vector2( 31202.2, 567.132 )
 
 [node name="BioGoo" type="Node" parent="Items"]
 
+editor/display_folded = true
+
 [node name="Object" parent="Items/BioGoo" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 5298.08, 640.07 )
@@ -826,6 +828,8 @@ transform/pos = Vector2( 42503.8, 598.049 )
 transform/pos = Vector2( 23920.8, 649.759 )
 
 [node name="PowerUp" type="Node" parent="Items"]
+
+editor/display_folded = true
 
 [node name="Object" parent="Items/PowerUp" instance=ExtResource( 10 )]
 

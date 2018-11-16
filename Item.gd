@@ -16,6 +16,9 @@ func destroy():
 	if node == null:
 		node = get_node("AnimationPlayer")
 	node.play("Destroy")
+	var sp = get_node("SamplePlayer")
+	if sp != null:
+		sp.play("Sound")
 
 func _on_Area_area_enter( area ):
 	var body = area.get_parent()

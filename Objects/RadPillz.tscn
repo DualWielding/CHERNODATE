@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=1]
 
 [ext_resource path="res://Object.tscn" type="PackedScene" id=1]
-[ext_resource path="res://NouvellesImages/animpilule2.png" type="Texture" id=2]
+[ext_resource path="res://NouvellesImages/props_gellule_anim.tex" type="Texture" id=2]
 
 [sub_resource type="Animation" id=1]
 
