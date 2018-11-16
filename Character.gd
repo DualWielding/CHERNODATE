@@ -9,6 +9,7 @@ const INITIAL_JUMP = 500.0
 const MAX_JUMP = 850.0
 const JUMP_INCREMENT = 300.0
 const MAX_SPEED = 850.0
+const rads_per_sec = 3
 var jump_numbers = 0
 var max_jumps = 2
 var velocity = Vector2()
@@ -26,12 +27,11 @@ var ready = false
 func _process(delta):
 	if not ready:
 		return
-	affect_rads(delta)
+	affect_rads(delta*rads_per_sec)
 
 func _fixed_process(delta):
 	if not ready:
 		return
-		print("lolz")
 
 	if velocity.x < MAX_SPEED:
 		velocity.x += delta * SPEED

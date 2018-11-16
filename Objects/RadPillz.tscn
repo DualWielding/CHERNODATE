@@ -25,7 +25,7 @@ tracks/0/keys = {
 texture = ExtResource( 2 )
 hframes = 4
 frame = 2
-rads_affection = -13.0
+rads_affection = -15.0
 
 [node name="CollisionPolygon2D" parent="Area"]
 

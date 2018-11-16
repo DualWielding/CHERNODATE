@@ -56,7 +56,7 @@ tracks/3/keys = {
 transform/pos = Vector2( 0, 0.527252 )
 texture = ExtResource( 2 )
 speed_affection = -300.0
-rads_affection = 10.0
+rads_affection = 5.0
 
 [node name="CollisionPolygon2D" parent="Area"]
 
