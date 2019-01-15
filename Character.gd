@@ -4,7 +4,7 @@ var new_member_class = preload("res://NewMember.tscn")
 
 const IDLE_TIME_AT_START = 1 #sec
 const GRAVITY = 2500.0
-const SPEED = 250.0
+const SPEED = 500.0
 const INITIAL_JUMP = 500.0
 const MAX_JUMP = 850.0
 const JUMP_INCREMENT = 300.0

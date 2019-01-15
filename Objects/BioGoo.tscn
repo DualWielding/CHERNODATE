@@ -25,7 +25,7 @@ tracks/0/keys = {
 texture = ExtResource( 2 )
 hframes = 7
 modulate = Color( 0.229497, 0.234375, 0.205994, 1 )
-speed_affection = -200.0
+speed_affection = -300.0
 rads_affection = 2.0
 is_destructible = false
 

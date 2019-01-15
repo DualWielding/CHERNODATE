@@ -54,7 +54,7 @@ tracks/3/keys = {
 [node name="Crate" instance=ExtResource( 1 )]
 
 texture = ExtResource( 2 )
-speed_affection = -300.0
+speed_affection = -800.0
 
 [node name="Area" parent="."]
 

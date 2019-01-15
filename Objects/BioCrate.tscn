@@ -65,7 +65,7 @@ samples/Sound = {
 
 transform/pos = Vector2( 0, 0.527252 )
 texture = ExtResource( 2 )
-speed_affection = -300.0
+speed_affection = -500.0
 rads_affection = 5.0
 
 [node name="Area" parent="."]
